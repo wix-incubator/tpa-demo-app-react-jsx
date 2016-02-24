@@ -1,0 +1,20 @@
+<div>
+    <section>
+        <h2>Design demo</h2>
+        <div class="wix-style-sample">
+            <h3 class="sample-element sample-title">Hello!</h3>
+            <p class="sample-element sample-content">Welcome to Demo App, let's play.</p>
+            <button class="sample-element sample-button">Click me!</button>
+            <form class="form">
+                <input title="email" type="email" class="sample-element sample-input" value="I'm an email text field!">
+            </form>
+        </div>
+    </section>
+
+    <section class="settings-update">
+        <h2>Last settings update</h2>
+        <pre>
+            <code class="json" dangerouslySetInnerHTML="{{__html: this.stringify(this.state.settingsUpdate)}}"/>
+        </pre>
+    </section>
+</div>

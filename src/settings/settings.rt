@@ -1,0 +1,13 @@
+<rt-require dependency="UI" as="UI"/>
+<rt-require dependency="settings/pages/pages" as="pages"/>
+
+<UI.verticalTabs defaultTab="tab0" style="height: 1000px">
+    <UI.tabs.header>
+        <UI.tabs.label rt-repeat="page in pages" for="{'tab' + pageIndex}" key="{pageIndex}" class="layout">{page.label}</UI.tabs.label>
+    </UI.tabs.header>
+    <UI.tabs.content>
+        <UI.tabs.tab rt-repeat="page in pages" key="{pageIndex}" name="{'tab' + pageIndex}" class="my-custom-tab">
+            <page.content onUpdate="(key, value)=>this.settingsUpdate(key, value)"/>
+        </UI.tabs.tab>
+    </UI.tabs.content>
+</UI.verticalTabs>

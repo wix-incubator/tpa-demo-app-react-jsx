@@ -1,0 +1,38 @@
+.wix-style-sample {
+    border: 1px solid #aaa;
+    padding: 15px;
+
+    h3, p {
+        margin: 0;
+        padding: 0;
+    }
+
+    .sample-element {
+        margin: 5px 0;
+    }
+
+    .sample-button {
+        padding: 10px 15px;
+        border: 0;
+    }
+
+    .sample-input {
+        padding: 10px 15px;
+        border: 2px solid #eee;
+    }
+
+    .form {
+        display: block;
+        margin-top: 10px;
+    }
+}
+
+.settings-update {
+
+    pre {
+        background-color: #222;
+        color: white;
+        padding: 20px;
+        border-radius: 4px;
+    }
+}

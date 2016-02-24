@@ -1,0 +1,47 @@
+@import "src/settings/constants.scss";
+
+.main-tab {
+  $logo-radius: 60px;
+  $logo-bg-color: #78C7F6;
+  $logo-text-color: #FFFFFF;
+  $inner-circle-ratio: 0.9;
+
+  text-align: center;
+  .app-logo {
+    background-color: $logo-bg-color;
+    height: $logo-radius;
+    width: $logo-radius;
+    border-radius: $logo-radius / 2;
+    margin: 20px auto;
+    position: relative;
+    &:after {
+      content: 'A';
+      color: $logo-text-color;
+      font-size: $logo-radius / 2;
+      line-height: $logo-radius;
+    }
+    &:before { /* inner circle */
+      content: '';
+      position: absolute;
+      box-sizing: border-box;
+      top: $logo-radius * (1 - $inner-circle-ratio) / 2;
+      left: $logo-radius * (1 - $inner-circle-ratio) / 2;
+      height: $logo-radius * $inner-circle-ratio;
+      width: $logo-radius * $inner-circle-ratio;
+      border-radius: $logo-radius * ($inner-circle-ratio / 2);
+      border: 1px dashed white;
+    }
+  }
+
+  .app-description {
+    text-align: center;
+    padding: 0 $padding;
+    line-height: 20px;
+    font-size: $main-text-size;
+    color: $main-text-color;
+  }
+
+  .main-cta-btn {
+    width: 190px;
+  }
+}

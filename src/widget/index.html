@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo App - Widget</title>
+
+    <link rel="stylesheet" href="widget.css"/>
+
+    <script src="/node_modules/react/dist/react-with-addons.js"></script>
+    <script src="/node_modules/requirejs/require.js"></script>
+    <script src="/config.requirejs.js"></script>
+
+    <style wix-style>
+        .wix-style-sample {
+            background: {{style.design_backgroundColor color-1}};
+        }
+
+        .sample-title {
+            {{style.design_titleFont}}
+        }
+
+        .sample-content {
+            {{style.design_contentFont}}
+        }
+
+        .sample-button {
+            background: {{style.design_buttonBackground}};
+            {{style.design_buttonFont}}
+        }
+
+        .sample-input {
+            color: {{style.design_inputColor}};
+        }
+    </style>
+</head>
+<body>
+<div id="root"></div>
+
+<script>
+    require(['React', 'jquery', 'widget/widget'], function (React, $, widget) {
+        'use strict';
+        $(document).ready(function () {
+            React.render(React.createElement(widget), $('#root').get(0));
+        });
+    });
+</script>
+</body>
+</html>
