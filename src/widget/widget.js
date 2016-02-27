@@ -1,6 +1,6 @@
 define(['React', 'Wix'], function (React, Wix) {
     return React.createClass({
-        getInitialState: function () {
+        getInitialState: () => {
             return {
                 settingsUpdate: {}
             }
@@ -11,12 +11,12 @@ define(['React', 'Wix'], function (React, Wix) {
 
             // You can get the style params programmatically, un-comment the following snippet to see how it works:
             /*Wix.Styles.getStyleParams(function (style) {
-             console.log(style);
+                console.log(style);
              });*/
 
             // You can also get the style every time it changes, try this:
             /*Wix.addEventListener(Wix.Events.STYLE_PARAMS_CHANGE, function (style) {
-             console.log(style);
+                console.log(style);
              });*/
         },
         onSettingsUpdate: function (update) {
@@ -24,11 +24,11 @@ define(['React', 'Wix'], function (React, Wix) {
                 settingsUpdate: update
             }, this.updateCompHeight);
         },
-        updateCompHeight: function (height) {
-            var desiredHeight = height || document.documentElement.scrollHeight;
+        updateCompHeight: (height) => {
+            const desiredHeight = height || document.documentElement.scrollHeight;
             Wix.setHeight(desiredHeight);
         },
-        stringify: function (input) {
+        stringify: (input) => {
             try {
                 return JSON.stringify(input, null, 4);
             } catch (err) {
@@ -36,6 +36,7 @@ define(['React', 'Wix'], function (React, Wix) {
             }
         },
         render: function () {
+            const {settingsUpdate} = this.state;
             return (
                 <div>
                     <section>
@@ -54,8 +55,7 @@ define(['React', 'Wix'], function (React, Wix) {
                     <section className="settings-update">
                         <h2>Last settings update</h2>
                     <pre>
-                        <code className="json"
-                              dangerouslySetInnerHTML="{{__html: this.stringify(this.state.settingsUpdate)}}"/>
+                        <code className="json">{this.stringify(settingsUpdate)}</code>
                     </pre>
                     </section>
                 </div>

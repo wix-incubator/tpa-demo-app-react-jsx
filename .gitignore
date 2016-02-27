@@ -1,5 +1,5 @@
+.idea
 node_modules
-*.rt.js
+dist
 *.css
 *.log
-.idea
