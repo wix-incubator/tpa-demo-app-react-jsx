@@ -1,22 +1,29 @@
 define(['React', 'UI'], function (React, UI) {
     return React.createClass({
         getInitialState: function () {
-            return {};
+            return {
+                email: '',
+                message: ''
+            };
         },
         onRateUs: function () {
             console.log('Thanks for rating us, you rock!');
         },
-        updateSupportFormState: function () {
-            var email = this.refs.email.getValue();
-            var message = this.refs.message.getValue();
-            this.setState({canSend: email.length && message.length});
+        setEmail: function (email) {
+            this.setState({
+                email: email,
+                canSend: Boolean(email.length && this.state.message.length)
+            });
+        },
+        setMessage: function (message) {
+            this.setState({
+                message: message,
+                canSend: Boolean(message.length && this.state.email.length)
+            });
         },
         onSend: function () {
-            var email = this.refs.email.getValue();
-            var message = this.refs.message.getValue();
-
-            console.log('email:', email);
-            console.log('message:', message);
+            console.log('email:', this.state.email);
+            console.log('message:', this.state.message);
 
             console.log('Thanks for reaching out, we will look into it');
         },
@@ -57,18 +64,16 @@ define(['React', 'UI'], function (React, UI) {
 
                     <UI.textInput
                         title="What's your email? (optional)"
-                        ref="email"
                         placeholder="Email"
-                        onChange={()=>this.updateSupportFormState()}/>
+                        onChange={this.setEmail}/>
 
                     <hr className="divider-long"/>
 
                     <UI.textInput
                         title="What do you want to tell us?"
-                        ref="message"
                         placeholder="Write us your message (new feature idea / other issues)"
                         isMultiLine={true}
-                        onChange={()=>this.updateSupportFormState()}/>
+                        onChange={this.setMessage}/>
 
                     <hr className="divider-long"/>
 
