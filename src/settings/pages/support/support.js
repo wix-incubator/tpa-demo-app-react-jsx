@@ -31,7 +31,7 @@ define(['React', 'UI'], function (React, UI) {
             return (
                 <div className="support-tab">
                     <UI.teaserPopup
-                        title="React out"
+                        title="Reach out"
                         text="Need help with the app? Think we can improve? Have an idea for a new feature?
                             We would love to hear what you have to say, just click on our email or submit a message below"
                         gotItText="Close"
