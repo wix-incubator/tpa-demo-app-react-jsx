@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <title>Demo App - Widget</title>
 
-    <link rel="stylesheet" href="widget.css"/>
-
-    <script src="/node_modules/react/dist/react-with-addons.js"></script>
-    <script src="/node_modules/requirejs/require.js"></script>
-    <script src="/config.requirejs.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/react/0.13.2/react-with-addons.js"></script>
+    <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.js"></script>
+    <script src="//static.parastorage.com/services/js-sdk/1.61.0/js/wix.min.js"></script>
 
     <style wix-style>
         .wix-style-sample {
@@ -35,14 +34,6 @@
 </head>
 <body>
 <div id="root"></div>
-
-<script>
-    require(['React', 'jquery', 'widget/widget'], function (React, $, widget) {
-        'use strict';
-        $(document).ready(function () {
-            React.render(React.createElement(widget), $('#root').get(0));
-        });
-    });
-</script>
+<script src="dist/widget.js"></script>
 </body>
 </html>

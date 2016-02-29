@@ -6,10 +6,10 @@ define(['React', 'UI'], function (React, UI) {
         render: function () {
             return (
                 <div className="main-tab">
-                    <div className="app-logo"></div>
+                    <img className="app-logo" src="logo.svg" alt="app logo"/>
                     <p className="app-description">
                         This is the Wix App settings demo.<br/>
-                        Please add a short description of you App + CTA for the main action.
+                        Please add a short description of your App + CTA for the main action.
                     </p>
                     <UI.button className="main-cta-btn" label="Main CTA" onClick={()=>this.onClick()}/>
                 </div>
