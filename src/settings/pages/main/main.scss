@@ -1,13 +1,13 @@
-@import "src/settings/constants.scss";
+@import "../../constants.scss";
 
 .main-tab {
-  $logo-radius: 81px;
+  $logo-radius: 60px;
 
   text-align: center;
   .app-logo {
     height: $logo-radius;
     width: $logo-radius;
-    margin: 10px auto 0;
+    margin: 20px auto 0;
     position: relative;
   }
 
