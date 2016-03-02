@@ -20,13 +20,12 @@ var getPlugins = function() {
 
 var webpackConfig = {
     entry: {
-        settings: './src/settings/settings_main',
-        widget: './src/widget/widget_main'
+        settings: __dirname + '/src/settings/settings_main',
+        widget: __dirname + '/src/widget/widget_main'
     },
     output: {
         path: path.join(__dirname, 'dist'),
-        filename: '[name].js',
-        publicPath: '/wix-ui-lib-sample-app/dist/'
+        filename: '[name].js'
     },
     plugins: getPlugins(),
     externals: {
