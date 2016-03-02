@@ -47,6 +47,7 @@ define(['React', 'UI'], function (React, UI) {
                         min={0}
                         max={2}
                         defaultValue={0.6}
+                        step={0.1}
                         onChange={(newVal)=>this.props.onUpdate('animations_delay', newVal)}>
                     </UI.slider>
 
