@@ -1,4 +1,4 @@
-define(['React', 'UI', './pages/pages'], function (React, UI, pages) {
+define(['react', 'UI', './pages/pages'], function (React, UI, pages) {
     return React.createClass({
         settingsUpdate: function (key, value) {
             const data = {key: key, value: value};

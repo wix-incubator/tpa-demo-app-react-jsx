@@ -1,4 +1,4 @@
-define(['React', 'UI'], function (React, UI) {
+define(['react', 'UI'], function (React, UI) {
     return React.createClass({
         onPlayAnimation: function () {
             console.log('Play Animation was clicked');

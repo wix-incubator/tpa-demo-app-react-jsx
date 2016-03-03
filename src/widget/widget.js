@@ -1,4 +1,4 @@
-define(['React', 'Wix'], function (React, Wix) {
+define(['react', 'Wix'], function (React, Wix) {
     return React.createClass({
         getInitialState: () => {
             return {

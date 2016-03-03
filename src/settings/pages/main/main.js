@@ -1,4 +1,4 @@
-define(['React', 'UI'], function (React, UI) {
+define(['react', 'UI'], function (React, UI) {
     return React.createClass({
         onClick: function () {
             console.log('This is your call-to-action, take it seriously');
