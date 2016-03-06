@@ -1,4 +1,4 @@
-define(['react', 'UI'], function (React, UI) {
+define(['react', 'editor-ui-lib'], function (React, UI) {
     return React.createClass({
         render: function () {
             return (

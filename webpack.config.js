@@ -35,7 +35,7 @@ var webpackConfig = {
         jquery: '$',
         angular: 'angular',
         Wix: 'Wix',
-        UI: 'UI'
+        'editor-ui-lib': 'UI'
     },
     module: {
         loaders: [
