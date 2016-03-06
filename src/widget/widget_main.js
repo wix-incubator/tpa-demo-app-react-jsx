@@ -1,4 +1,5 @@
 var widget = require('./widget');
+var $ = require('jquery');
 require('./widget.scss');
 
 $(document).ready(function () {
