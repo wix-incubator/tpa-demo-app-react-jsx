@@ -9,7 +9,6 @@ var settings =  React.createClass({
     },
     render: function () {
         return (
-            <div>
                 <UI.appSettings>
                     <UI.appTabs defaultTabIndex={0} onChange={function(index){console.log('tab was changed to: ' + index);}}>
                         {pages.map((page) => {
@@ -19,7 +18,6 @@ var settings =  React.createClass({
                         })}
                     </UI.appTabs>
                 </UI.appSettings>
-            </div>
         );
     }
 });
