@@ -4,8 +4,7 @@
   "dependencies": {
     "jquery": "^2.1.4",
     "lodash": "^3.10.1",
-    "react": "^0.13.0",
-    "editor-ui-lib": "^0.0.4"
+    "react": "^0.13.0"
   },
   "devDependencies": {
     "babel-loader": "^6.2.0",
