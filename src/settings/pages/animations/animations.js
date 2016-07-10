@@ -54,10 +54,10 @@ define(['react', 'editor-ui-lib'], function (React, UI) {
                     <hr className="divider-long"/>
 
                     <div>
-                        <UI.toggle label="Opposite effect"
+                        <UI.toggleSwitch label="Opposite effect"
                                    defaultValue={true}
                                    onChange={(newVal)=>this.props.onUpdate('animations_oppositeEffect', newVal)}>
-                        </UI.toggle>
+                        </UI.toggleSwitch>
                     </div>
                 </div>
             )

@@ -17,17 +17,17 @@ define(['react', 'editor-ui-lib'], function (React, UI) {
                     <UI.sectionDividerLabeled label="Enable functionality"/>
 
                     <div>
-                        <UI.toggle label="Allow editing"
+                        <UI.toggleSwitch label="Allow editing"
                                    defaultValue={true}
                                    onChange={(newVal)=>this.props.onUpdate('settings_allowEditing', newVal)}>
-                        </UI.toggle>
+                        </UI.toggleSwitch>
                     </div>
                     <hr className="divider-long"/>
                     <div>
-                        <UI.toggle label="Allow deleting"
+                        <UI.toggleSwitch label="Allow deleting"
                                    defaultValue={true}
                                    onChange={(newVal)=>this.props.onUpdate('settings_allowDeleting', newVal)}>
-                        </UI.toggle>
+                        </UI.toggleSwitch>
                     </div>
 
                     <UI.sectionDividerLabeled label="Display info"/>
