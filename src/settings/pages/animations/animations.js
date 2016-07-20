@@ -5,24 +5,31 @@ define(['react', 'editor-ui-lib'], function (React, UI) {
         },
         render: function () {
             return (
-                <div>
+                <div className="animations-tab">
                     <UI.dropDownSelect
                         defaultValue="slide"
                         title="Animation"
                         options={[
-                        { value: 'slide', label: 'Slide'},
-                        { value: 'fade', label: 'Fade'},
-                        { value: 'other', label: 'Something else'}
+                            { value: 'slide', label: 'Slide'},
+                            { value: 'fade', label: 'Fade'},
+                            { value: 'other', label: 'Something else'}
                         ]}
-                        onChange={(newVal)=>this.props.onUpdate('animations_type', newVal)}>
-                    </UI.dropDownSelect>
+                        onChange={(newVal)=>this.props.onUpdate('animations_type', newVal)}/>
 
-                    <UI.sectionDividerLabeled label="Animation settings"/>
+                    <hr className="divider-long"/>
+
+                    <UI.sectionDividerLabeled
+                        label="Animation settings"
+                        infoText="info text"
+                        infoTitle="info title"/>
+
+                    <hr className="divider-long"/>
 
                     <div className="button-wrapper-center">
                         <UI.button
+                            icon="playAnimation"
                             label="Play Animation"
-                            icon="calendar"
+                            className="btn-confirm-secondary"
                             onClick={()=>this.onPlayAnimation()}/>
                     </div>
 
@@ -32,13 +39,12 @@ define(['react', 'editor-ui-lib'], function (React, UI) {
                         defaultValue="right"
                         title="Direction"
                         options={[
-                        { value: 'top', label: 'From Top'},
-                        { value: 'right', label: 'From Right'},
-                        { value: 'bottom', label: 'From Bottom'},
-                        { value: 'left', label: 'From Left'}
+                            { value: 'top', label: 'From Top'},
+                            { value: 'right', label: 'From Right'},
+                            { value: 'bottom', label: 'From Bottom'},
+                            { value: 'left', label: 'From Left'}
                         ]}
-                        onChange={(newVal)=>this.props.onUpdate('animations_direction', newVal)}>
-                    </UI.dropDownSelect>
+                        onChange={(newVal)=>this.props.onUpdate('animations_direction', newVal)}/>
 
                     <hr className="divider-long"/>
 
@@ -46,18 +52,17 @@ define(['react', 'editor-ui-lib'], function (React, UI) {
                         title="Delay (secs)"
                         min={0}
                         max={2}
-                        defaultValue={0.6}
                         step={0.1}
-                        onChange={(newVal)=>this.props.onUpdate('animations_delay', newVal)}>
-                    </UI.slider>
+                        defaultValue={0.6}
+                        onChange={(newVal)=>this.props.onUpdate('animations_delay', newVal)}/>
 
                     <hr className="divider-long"/>
 
                     <div>
-                        <UI.toggleSwitch label="Opposite effect"
-                                   defaultValue={true}
-                                   onChange={(newVal)=>this.props.onUpdate('animations_oppositeEffect', newVal)}>
-                        </UI.toggleSwitch>
+                        <UI.toggleSwitch
+                            label="Opposite effect"
+                            defaultValue={true}
+                            onChange={(newVal)=>this.props.onUpdate('animations_oppositeEffect', newVal)}/>
                     </div>
                 </div>
             )
