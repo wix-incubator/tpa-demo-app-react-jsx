@@ -35,8 +35,8 @@ define(['react', 'editor-ui-lib'], function (React, UI) {
                     <hr className="divider-long"/>
 
                     <ul className="developer-info">
-                        <li><UI.symbol name='infoSmall'/> App FAQ</li>
-                        <li><UI.symbol name='playAnimation'/> support@wix.com</li>
+                        <li><UI.symbol name='help'/> App FAQ</li>
+                        <li><UI.symbol name='email'/> support@wix.com</li>
                         <li><UI.symbol name='globus'/> Developer Website</li>
                         <li><UI.symbol name='phone'/> 1 408 974 4897</li>
                     </ul>
