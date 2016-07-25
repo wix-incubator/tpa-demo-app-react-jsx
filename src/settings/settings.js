@@ -18,7 +18,7 @@ var settingsApp =  React.createClass({
     render: function () {
         return (
             <UI.appSettings>
-                <UI.appTabs defaultTabIndex={0}>
+                <UI.panelTabs defaultTabIndex={0}>
                     <pages.main tab="Main"/>
                     <pages.settings tab="Settings"/>
                     <pages.layout tab="Layout"/>
@@ -27,7 +27,7 @@ var settingsApp =  React.createClass({
                     <pages.support tab="Support"/>
                     <hr className="divider-short"/>
                     <UI.button label="Upgrade" className="btn-upgrade-nav"/>
-                </UI.appTabs>
+                </UI.panelTabs>
             </UI.appSettings>
         );
     }
