@@ -31,6 +31,7 @@ var webpackConfig = {
     externals: {
         react: 'React',
         'react/addons': 'React',
+        'react-dom': 'ReactDOM',
         lodash: '_',
         jquery: '$',
         angular: 'angular',
