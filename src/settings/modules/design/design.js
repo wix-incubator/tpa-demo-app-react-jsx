@@ -11,8 +11,8 @@ export default class Design extends React.Component {
 
                 <UI.fontAndColorPicker
                     title="Font style and color"
-                    wix-param-font="_titleFont"
-                    wix-param-color="_titleColor"
+                    wix-param-font="design_titleFont"
+                    wix-param-color="design_titleColor"
                     startWithColor="color-1"
                     startWithTheme="font_3"
                     infoTitle="some info title"
@@ -33,8 +33,8 @@ export default class Design extends React.Component {
 
                 <UI.fontAndColorPicker
                     title="Button Text"
-                    wix-param-font="btnFont"
-                    wix-param-color="btnColor"
+                    wix-param-font="design_btnFont"
+                    wix-param-color="design_btnColor"
                     infoTitle="some info title"
                     infoText="some information text should be here"/>
 
@@ -42,10 +42,10 @@ export default class Design extends React.Component {
 
                 <UI.colorPickerSlider
                     title="Button Background"
-                    wix-param="btnBG"
+                    wix-param="design_btnBackground"
                     startWithColor="color-3"
                     startWithOpacity={0.7}
-                    onChange={(newVal)=>this.props.onUpdate('design_buttonBackground', newVal)}/>
+                    onChange={(newVal)=>this.props.onUpdate('design_btnBackground', newVal)}/>
 
                 <hr className="divider-long"/>
                 <UI.sectionDividerLabeled label="Search fields"/>
