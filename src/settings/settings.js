@@ -1,36 +1,34 @@
-var UI = require('editor-ui-lib');
-require('react');
+import UI from 'editor-ui-lib';
+import React from 'react'
+import Wix from 'Wix';
+import Main from './modules/main/main';
+import Settings from './modules/settings/settings';
+import Layout from './modules/layout/layout';
+import Design from './modules/design/design';
+import Animations from './modules/animations/animations';
+import Support from './modules/support/support';
 
-var pages = {
-    main: require('./pages/main/main'),
-    settings: require('./pages/settings/settings'),
-    layout: require('./pages/layout/layout'),
-    design: require('./pages/design/design'),
-    animations: require('./pages/animations/animations'),
-    support: require('./pages/support/support')
-};
-
-var settingsApp =  React.createClass({
-    settingsUpdate: function (key, value) {
+export default class settings extends React.Component {
+    settingsUpdate (key, value) {
         const data = {key: key, value: value};
         Wix.Settings.triggerSettingsUpdatedEvent(data);
-    },
-    render: function () {
+        console.log(data);
+    }
+
+    render () {
         return (
             <UI.appSettings>
                 <UI.panelTabs defaultTabIndex={0}>
-                    <pages.main tab="Main"/>
-                    <pages.settings tab="Settings"/>
-                    <pages.layout tab="Layout"/>
-                    <pages.design tab="Design"/>
-                    <pages.animations tab="Animations"/>
-                    <pages.support tab="Support"/>
+                    <Main tab="Main"/>
+                    <Settings tab="Settings" onUpdate={this.settingsUpdate}/>
+                    <Layout tab="Layout" onUpdate={this.settingsUpdate}/>
+                    <Design tab="Design" onUpdate={this.settingsUpdate}/>
+                    <Animations tab="Animations" onUpdate={this.settingsUpdate}/>
+                    <Support tab="Support"/>
                     <hr className="divider-short"/>
                     <UI.button label="Upgrade" className="btn-upgrade-nav"/>
                 </UI.panelTabs>
             </UI.appSettings>
-        );
+        )
     }
-});
-
-module.exports = settingsApp;
+}
