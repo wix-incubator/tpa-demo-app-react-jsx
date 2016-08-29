@@ -53,7 +53,7 @@ export default class Design extends React.Component {
 
                 <UI.colorPickerInput
                     title="Field Text"
-                    wix-param="inputColor"
+                    wix-param="design_inputColor"
                     startWithColor="color-3"
                     onChange={(newVal)=>this.props.onUpdate('design_inputColor', newVal)}/>
             </div>
