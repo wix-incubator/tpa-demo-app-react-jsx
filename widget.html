@@ -4,33 +4,38 @@
     <meta charset="UTF-8">
     <title>Demo App - Widget</title>
 
-    <script src="//cdnjs.cloudflare.com/ajax/libs/react/0.13.2/react-with-addons.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/react/15.3.0/react-with-addons.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/react/15.3.0/react-dom.js"></script>
     <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.js"></script>
     <script src="//static.parastorage.com/services/js-sdk/1.66.0/js/wix.min.js"></script>
 
     <style wix-style>
         .wix-style-sample {
-            background: {{style.design_backgroundColor color-1}};
+            background: {{style._backgroundColor color-1}};
         }
 
         .sample-title {
-            {{style.design_titleFont}}
-            color: {{style.design_titleColor color-3}};
+            {{style._titleFont font_4}}
+            color: {{style._titleColor color-5}};
         }
 
         .sample-content {
-            {{style.design_contentFont}};
+            {{style._descFont font_8}}
+            color: {{style._descColor color-4}};
         }
 
         .sample-button {
-            background: {{style.design_btnBackground}};
-            color: {{style.design_btnColor}};
-            {{style.design_btnFont}};
+            background: {{style._btnBgColor color-8}};
+            color: {{style._btnTextColor color-1}};
+            {{style._btnFont font_8}}
         }
 
         .sample-input {
-            color: {{style.design_inputColor}}
+            background:{{style._inputFieldBackground color-3}};
+            color: {{style._inputColor}};
+            {{style._inputFont font_8}}
+            border:1px solid black;
         }
     </style>
 </head>

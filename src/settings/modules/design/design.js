@@ -10,52 +10,76 @@ export default class Design extends React.Component {
                 <hr className="divider-long"/>
 
                 <UI.fontAndColorPicker
-                    title="Font style and color"
-                    wix-param-font="design_titleFont"
-                    wix-param-color="design_titleColor"
-                    startWithColor="color-1"
-                    startWithTheme="font_3"
+                    title="Title font and color"
+                    wix-param-font="_titleFont"
+                    wix-param-color="_titleColor"
+                    startWithColor="color-5"
+                    startWithTheme="font_4"
                     infoTitle="some info title"
                     infoText="some information text should be here"/>
 
-                <hr className="divider-long"/>
-
-                <UI.colorPickerSlider
-                    title="Background"
-                    wix-param="design_backgroundColor"
-                    startWithColor="color-11"
-                    startWithOpacity={1}
-                    onChange={(newVal)=>this.props.onUpdate('design_backgroundColor', newVal)}/>
-
-                <hr className="divider-long"/>
-                <UI.sectionDividerLabeled label="Buttons"/>
                 <hr className="divider-long"/>
 
                 <UI.fontAndColorPicker
-                    title="Button Text"
-                    wix-param-font="design_btnFont"
-                    wix-param-color="design_btnColor"
+                    title="Description font and color"
+                    wix-param-font="_descFont"
+                    wix-param-color="_descColor"
+                    startWithColor="color-4"
+                    startWithTheme="font_8"
                     infoTitle="some info title"
                     infoText="some information text should be here"/>
 
                 <hr className="divider-long"/>
 
                 <UI.colorPickerSlider
-                    title="Button Background"
-                    wix-param="design_btnBackground"
-                    startWithColor="color-3"
-                    startWithOpacity={0.7}
-                    onChange={(newVal)=>this.props.onUpdate('design_btnBackground', newVal)}/>
+                    title="Background color"
+                    wix-param="_backgroundColor"
+                    startWithColor="color-1"
+                    startWithOpacity={1}
+                    onChange={(newVal)=>this.props.onUpdate('_backgroundColor', newVal)}/>
 
                 <hr className="divider-long"/>
-                <UI.sectionDividerLabeled label="Search fields"/>
+                <UI.sectionDividerLabeled label="Search Field"/>
+                <hr className="divider-long"/>
+
+                <UI.fontAndColorPicker
+                    title="Input field font and color"
+                    wix-param-font="_inputFont"
+                    wix-param-color="_inputColor"
+                    startWithColor="color-3"
+                    startWithTheme="font_8"
+                    infoTitle="some info title"
+                    infoText="some information text should be here"/>
+
+                <hr className="divider-long"/>
+
+                <UI.colorPickerSlider
+                    title="Input field Background"
+                    wix-param="_inputFieldBackground"
+                    startWithColor="color-3"
+                    startWithOpacity={1}
+                    onChange={(newVal)=>this.props.onUpdate('_inputFieldBackground', newVal)}/>
+
+                <hr className="divider-long"/>
+                <UI.sectionDividerLabeled label="Button"/>
+                <hr className="divider-long"/>
+
+                <UI.fontAndColorPicker
+                    title="Button font and color"
+                    wix-param-font="_btnFont"
+                    wix-param-color="_btnTextColor"
+                    startWithColor="color-1"
+                    startWithTheme="font_8"
+                    infoTitle="some info title"
+                    infoText="some information text should be here"/>
+
                 <hr className="divider-long"/>
 
                 <UI.colorPickerInput
-                    title="Field Text"
-                    wix-param="design_inputColor"
-                    startWithColor="color-3"
-                    onChange={(newVal)=>this.props.onUpdate('design_inputColor', newVal)}/>
+                    title="Button background"
+                    wix-param="_btnBgColor"
+                    startWithColor="color-8"
+                    onChange={(newVal)=>this.props.onUpdate('_btnBgColor', newVal)}/>
             </div>
         )
     }

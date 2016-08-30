@@ -44,7 +44,6 @@ export default class Support extends React.Component {
                 <hr className="divider-long"/>
 
                 <ul className="developer-info">
-                    <li><UI.symbol name='help'/> App FAQ</li>
                     <li><UI.symbol name='email'/> support@wix.com</li>
                     <li><UI.symbol name='globus'/> Developer Website</li>
                     <li><UI.symbol name='phone'/> 1 408 974 4897</li>
@@ -57,7 +56,7 @@ export default class Support extends React.Component {
                 <p className="review-paragraph">Have you enjoyed the app? Spread the word and rate us in the app market</p>
                 <div className="button-wrapper-center">
                     <UI.button
-                        className="rate-us-btn"
+                        className="btn-confirm-primary"
                         label="Rate Us"
                         onClick={()=>this.onRateUs()}/>
                 </div>

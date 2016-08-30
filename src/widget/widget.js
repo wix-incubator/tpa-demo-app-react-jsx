@@ -39,25 +39,20 @@ define(['react', 'Wix'], function (React, Wix) {
             const {settingsUpdate} = this.state;
             return (
                 <div>
-                    <section>
-                        <h2>Design demo</h2>
-                        <div className="wix-style-sample">
-                            <h3 className="sample-element sample-title">Hello!</h3>
-                            <p className="sample-element sample-content">Welcome to Demo App, let's play.</p>
-                            <button className="sample-element sample-button">Click me!</button>
-                            <form className="form">
-                                <input title="email" type="email" className="sample-element sample-input"
-                                       value="I'm an email text field!"/>
-                            </form>
-                        </div>
-                    </section>
 
-                    <section className="settings-update">
-                        <h2>Last settings update</h2>
-                    <pre>
-                        <code className="json">{this.stringify(settingsUpdate)}</code>
-                    </pre>
-                    </section>
+                <div class="wix-style-sample">
+                     <h3 class="sample-element sample-title">Demo App</h3>
+                <p class="sample-element sample-content">Welcome to the Wix Demo App, let's play!</p>
+                <form class="form">
+                        <input title="email" type="email" class="sample-element sample-input" value="Enter text here"/>
+                </form>
+                <button class="sample-element sample-button">Click me!</button>
+                <br/>
+                      <h3 class="sample-element sample-title" >Last settings update</h3>
+                <pre>
+                     <code class="json sample-content">{{settingsUpdate}}</code>
+                </pre>
+            </div>
                 </div>
             )
         }
