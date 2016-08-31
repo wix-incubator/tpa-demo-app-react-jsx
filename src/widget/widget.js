@@ -49,7 +49,7 @@ define(['react', 'Wix'], function (React, Wix) {
                         <br/>
                         <h3 className="sample-element sample-title">Last settings update</h3>
                         <pre>
-                             <code className="json sample-content">{{settingsUpdate}}</code>
+                            <code className="json sample-content">{this.stringify(settingsUpdate)}</code>
                         </pre>
                     </div>
                 </div>
