@@ -43,7 +43,7 @@ define(['react', 'Wix'], function (React, Wix) {
                         <h3 className="sample-element sample-title">Demo App</h3>
                         <p className="sample-element sample-content">Welcome to the Wix Demo App, let's play!</p>
                         <form className="form">
-                            <input title="email" type="email" className="sample-element sample-input" value="Enter text here"/>
+                            <input title="email" type="email" className="sample-element sample-input" placeholder="Enter text here" value={this.props.email}/>
                         </form>
                         <button className="sample-element sample-button">Click me!</button>
                         <br/>

@@ -32,7 +32,7 @@ export default class Design extends React.Component {
                 <hr className="divider-long"/>
 
                 <UI.colorPickerSlider
-                    title="Background color"
+                    title="Background Color"
                     wix-param="_backgroundColor"
                     startWithColor="color-1"
                     startWithOpacity={1}
