@@ -56,7 +56,7 @@ export default class Design extends React.Component {
                 <UI.colorPickerSlider
                     title="Input field Background"
                     wix-param="_inputFieldBackground"
-                    startWithColor="color-3"
+                    startWithColor="color-1"
                     startWithOpacity={1}
                     onChange={(newVal)=>this.props.onUpdate('_inputFieldBackground', newVal)}/>
 
