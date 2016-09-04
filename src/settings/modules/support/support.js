@@ -45,7 +45,7 @@ export default class Support extends React.Component {
 
                 <ul className="developer-info">
                     <li><UI.symbol name='email'/> support@wix.com</li>
-                    <li><UI.symbol name='globus'/> Developer Website</li>
+                    <li><UI.symbol name='globe'/> Developer Website</li>
                     <li><UI.symbol name='phone'/> 1 408 974 4897</li>
                 </ul>
 
