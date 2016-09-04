@@ -1,0 +1,32 @@
+@import "src/settings/constants.scss";
+
+.support-tab {
+
+  .developer-info {
+    font-size: $main-text-size;
+    padding: 17px $padding;
+    li {
+      svg {
+        position: relative;
+        top: 4px;
+        padding-right: 7px;
+      }
+      color: $link-text-color;
+      line-height: 28px;
+      height: 28px;
+      cursor: pointer;
+    }
+  }
+
+  .review-paragraph {
+    text-align: center;
+    padding: 0 $padding;
+    line-height: 20px;
+    font-size: $main-text-size;
+    color: $main-text-color;
+  }
+
+  .rate-us-btn {
+    width: 192px;
+  }
+}

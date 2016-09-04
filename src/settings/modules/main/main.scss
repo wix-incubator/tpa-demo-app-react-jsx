@@ -1,0 +1,25 @@
+@import "../../constants.scss";
+
+.main-tab {
+  $logo-radius: 60px;
+
+  text-align: center;
+  .app-logo {
+    height: $logo-radius;
+    width: $logo-radius;
+    margin: 20px auto 0;
+    position: relative;
+  }
+
+  .app-description {
+    text-align: center;
+    padding: 0 $padding;
+    line-height: 21px;
+    font-size: $main-text-size;
+    color: $main-text-color;
+  }
+
+  .main-cta-btn {
+    width: 180px;
+  }
+}
