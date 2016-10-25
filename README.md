@@ -23,7 +23,7 @@ Generate the app:
 `cd tpa-demo-app-react-jsx/`
 3. Install npm
 `npm install`
-4. Run webpack
+4. ~~Run webpack~~ now runs automatically in 'post install' stage via `npm postinstall`
 `Webpack`
 5. Run the app
 `npm start`
@@ -34,11 +34,12 @@ This will run a webserver on your local host. You can now view your app in your 
 
 1. Follow the registration guide to create a new app.
 2. Add a Widget endpoint:
-  * Endpoint URL with the following URL:http://localhost:3000/index.html
+  * Endpoint URL with the following URL: http://localhost:3000/widget.html
   * Set the width to 300px and height to 400px.
 3. Set the App Setting URL to: 
   * http://localhost:3000/settings.html
   * Set the height (up to 578px). 
+  * Check the 'Using new UI-Lib' checkbox.
 4. Save your app.
 
 

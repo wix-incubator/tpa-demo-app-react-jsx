@@ -3,7 +3,7 @@ var webpack = require('webpack');
 
 var getPlugins = function() {
     var plugins = [];
-    var hotReload = new webpack.HotModuleReplacementPlugin()
+    var hotReload = new webpack.HotModuleReplacementPlugin();
     var noErrorsPlugin = new webpack.NoErrorsPlugin();
     var uglifyPlugin = new webpack.optimize.UglifyJsPlugin({
         compressor: {

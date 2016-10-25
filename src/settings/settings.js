@@ -1,6 +1,6 @@
 import UI from 'editor-ui-lib';
 import React from 'react'
-import Wix from 'Wix';
+import Wix from 'wix-sdk';
 import Main from './modules/main/main';
 import Settings from './modules/settings/settings';
 import Layout from './modules/layout/layout';

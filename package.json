@@ -1,12 +1,14 @@
 {
   "name": "tpa-demo-app-react-jsx",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "postinstall": "webpack"
   },
   "version": "0.0.1",
   "dependencies": {
     "react": "^15.3.0",
-    "react-dom": "^15.3.0"
+    "react-dom": "^15.3.0",
+    "wix-sdk": "^1.67.0"
   },
   "devDependencies": {
     "babel-core": "^6.3.26",
