@@ -27,10 +27,11 @@ export default class Animation extends React.Component {
 
                 <div className="button-wrapper-center">
                     <UI.button
-                        icon="playAnimation"
-                        label="Play Animation"
                         className="btn-confirm-secondary"
-                        onClick={()=>this.onPlayAnimation()}/>
+                        onClick={()=>this.onPlayAnimation()}>
+                        <UI.symbol name="playAnimation"/>
+                        Play Animation
+                    </UI.button>
                 </div>
 
                 <hr className="divider-long"/>

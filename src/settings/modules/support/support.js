@@ -55,10 +55,9 @@ export default class Support extends React.Component {
 
                 <p className="review-paragraph">Have you enjoyed the app? Spread the word and rate us in the app market</p>
                 <div className="button-wrapper-center">
-                    <UI.button
-                        className="btn-confirm-primary"
-                        label="Rate Us"
-                        onClick={()=>this.onRateUs()}/>
+                    <UI.button className="btn-confirm-primary" onClick={()=>this.onRateUs()}>
+                        Rate Us
+                    </UI.button>
                 </div>
 
                 <hr className="divider-long"/>
@@ -87,9 +86,10 @@ export default class Support extends React.Component {
                 <hr className="divider-short"/>
 
                 <div className="button-wrapper-center">
-                    <UI.button label="Send"
-                               disabled={!this.state.canSend}
-                               onClick={()=>this.onSend()}/>
+                    <UI.button disabled={!this.state.canSend} onClick={()=>this.onSend()}>
+                        Send
+                    </UI.button>
+
                 </div>
             </div>
         )
