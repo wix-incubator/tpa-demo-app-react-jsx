@@ -40,6 +40,13 @@ export default class Settings extends React.Component {
                 <UI.sectionDividerLabeled label="Display info"/>
                 <hr className="divider-long"/>
 
+                <UI.checkbox value="{this.state.checkboxValue}"
+                             label="Checkbox"
+                             labelAfterSymbol="{true}"
+                             onChange="{this.onCheckboxChange}"
+                             shouldTranslate="{false}">
+                </UI.checkbox>
+
                 <div>
                     <UI.checkbox
                         label="Name"
