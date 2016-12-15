@@ -49,7 +49,7 @@ export default class Main extends React.Component {
                     ]}
                 />
 
-                <h1 style={{    backgroundColor: 'rgb(220, 217, 217)', margin: 0, padding: '4px 10px', border: '1px solid #c2c2f5', fontSize: '24px', borderWidth: '1px 0'}}>old school components</h1>
+                <h1 style={{backgroundColor: 'rgb(220, 217, 217)', margin: 0, padding: '4px 10px', border: '1px solid #c2c2f5', fontSize: '24px', borderWidth: '1px 0'}}>old school components</h1>
 
                 <UI.tooltip value="tooltip">
                     <span style={{background: 'yellow', padding: '5px', margin: '5px'}}>hover me! I have a lovely tooltip!</span>
