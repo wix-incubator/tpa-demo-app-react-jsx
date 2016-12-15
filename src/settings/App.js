@@ -3,7 +3,7 @@ import { render } from  'react-dom';
 import Wix from 'Wix';
 import settingsApp from './settings'
 import $ from 'jquery';
-//import './settings.scss';
+import './settings.scss';
 
 var rootInstance = null;
 $(document).ready(function () {
