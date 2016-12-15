@@ -20,7 +20,7 @@ export default class Main extends React.Component {
 
                 <UI.toggleSwitch
                     wix-param="booleanValue"
-                    label="checkbox with labelAfterSymbol"
+                    label="label with labelAfterSymbol"
                 />
 
                 <UI.checkbox
@@ -33,9 +33,9 @@ export default class Main extends React.Component {
                     wix-param="numeric1-3Value"
                     title="Select position"
                     options={[
-                        { value: 1, label: 'first', className: 'classFirst'},
-                        { value: 2, label: 'second', className: 'classSecond'},
-                        { value: 3, label: 'third', className: 'classThird'}
+                        { value: '1', label: 'first', className: 'classFirst'},
+                        { value: '2', label: 'second', className: 'classSecond'},
+                        { value: '3', label: 'third', className: 'classThird'}
                     ]}
                 />
 
@@ -43,9 +43,9 @@ export default class Main extends React.Component {
                     wix-param="numeric1-3Value"
                     onChange={e=>console.log(e)}
                     options={[
-                        {value: 1, label: 'main'},
-                        {value: 2, label: 'sub level 1'},
-                        {value: 3, label: 'sub 2 level 1'}
+                        {value: '1', label: 'main'},
+                        {value: '2', label: 'sub level 1'},
+                        {value: '3', label: 'sub 2 level 1'}
                     ]}
                 />
 
@@ -55,25 +55,16 @@ export default class Main extends React.Component {
                     <span style={{background: 'yellow', padding: '5px', margin: '5px'}}>hover me! I have a lovely tooltip!</span>
                 </UI.tooltip>
 
-                <UI.toggleButtons
-                    wix-param="numeric1-3Value"
-                    options={[
-                        {value: 1, label: 'main'},
-                        {value: 2, label: 'sub level 1'},
-                        {value: 3, label: 'sub 2 level 1'}
-                    ]}
-                />
-
                 <UI.toggleButtonsGroup
                     options={[
-                        {value: 1, label: 'main'},
-                        {value: 2, label: 'sub level 1'},
-                        {value: 3, label: 'sub 2 level 1'}
+                        {value: '1', label: 'main'},
+                        {value: '2', label: 'sub level 1'},
+                        {value: '3', label: 'sub 2 level 1'}
                     ]}
                 />
 
-                <UI.fontPicker title_title="Font Picker" infoIcon_title="title" infoIcon_text="text" wix-param="fontPickerParam" />
-                <UI.fontAndColorPicker title_title="Font Picker" infoIcon_title="title" infoIcon_text="text" wix-param="fontPickerParam" />
+                <UI.fontPicker title="Font Picker" title="title" text="text" wix-param="fontPickerParam" />
+                <UI.fontAndColorPicker title="Font Picker" title="title" text="text" wix-param="fontPickerParam" />
                 <UI.colorPickerInput title="Color Picker" wix-param="colorPickerParam"/>
                 <UI.colorPickerSlider title="Color Picker" wix-param="colorPickerParam"/>
 

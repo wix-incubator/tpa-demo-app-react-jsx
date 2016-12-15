@@ -3,9 +3,9 @@ import React from 'react'
 import Wix from 'Wix';
 import Main from './modules/main/main';
 
-const DBInitialState = {
+const defaultDBValue = {
     booleanValue: false,
-    'numeric1-3Value': 2,
+    'numeric1-3Value': '2',
     fontPickerParam: {},
     colorPickerParam: {}
 }
@@ -19,10 +19,14 @@ export default class settings extends React.Component {
 
     render () {
         return (
-            <UI.appSettings DBClass={UI.styleParamDB} DBInitialState={DBInitialState}>
+            <UI.appSettings DBClass={UI.styleParamDB} defaultDBValue={defaultDBValue}>
                 <UI.panelTabs defaultTabIndex={0}>
-                    <Main tab="Main"/>
-                    <Main tab="MainDuplicate"/>
+                    <UI.panelTab label="Main">
+                        <Main/>
+                    </UI.panelTab>
+                    <UI.panelTab label="MainDuplicate">
+                        <Main/>
+                    </UI.panelTab>
                 </UI.panelTabs>
             </UI.appSettings>
         )
