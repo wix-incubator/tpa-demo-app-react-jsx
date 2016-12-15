@@ -27,6 +27,9 @@ export default class settings extends React.Component {
                     <Support tab="Support"/>
                     <hr className="divider-short"/>
                     <UI.button label="Upgrade" className="btn-upgrade-nav"/>
+                    <UI.button label="Upgrade" className="btn-upgrade-banner"/>
+                    <UI.button label="Upgrade" className="btn-upgrade-nav"/>
+                    <UI.symbol name="premiumBanner"/>
                 </UI.panelTabs>
             </UI.appSettings>
         )
