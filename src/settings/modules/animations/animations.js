@@ -7,7 +7,7 @@ export default class Animation extends React.Component {
         return (
             <div className="animations-tab">
 
-                <ul class="comments">
+                <ul className="comments">
                     <li>'Animation' title is missing, use composite</li>
                 </ul>
                 <UI.dropDownSelect
@@ -21,7 +21,7 @@ export default class Animation extends React.Component {
                     onChange={(newVal)=>this.props.onUpdate('animationType', newVal)}
                 />
 
-                <ul class="comments">
+                <ul className="comments">
                     <li>
                         infoText="info text"
                         infoTitle="info title"
@@ -44,7 +44,7 @@ export default class Animation extends React.Component {
 
                 <UI.divider long={true} />
 
-                <ul class="comments">
+                <ul className="comments">
                     <li>'Direction' title is missing, use composite</li>
                 </ul>
                 <UI.dropDownSelect

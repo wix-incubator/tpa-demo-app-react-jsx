@@ -34,7 +34,7 @@ export default class Support extends React.Component {
                 <UI.sectionDividerLabeled>Developer info</UI.sectionDividerLabeled>
                 <UI.divider long={true} />
 
-                <ul class="comments">
+                <ul className="comments">
                     <li>we are looking for alternative for UI.symbol</li>
                 </ul>
                 <ul className="developer-info">

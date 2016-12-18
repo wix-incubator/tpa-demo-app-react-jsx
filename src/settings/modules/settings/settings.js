@@ -5,7 +5,7 @@ export default class Settings extends React.Component {
     render () {
         return (
             <div>
-                <ul class="comments">
+                <ul className="comments">
                     <li>title is missing</li>
                 </ul>
                 <UI.dropDownSelect
@@ -76,7 +76,7 @@ export default class Settings extends React.Component {
 
                 <UI.divider long={true} />
 
-                <ul class="comments">
+                <ul className="comments">
                     <li>title is missing, use composite</li>
                 </ul>
                 <UI.textInput
@@ -86,7 +86,7 @@ export default class Settings extends React.Component {
 
                 <UI.divider long={true} />
 
-                <ul class="comments">
+                <ul className="comments">
                     <li>title is missing, use composite</li>
                 </ul>
                 <UI.textInputMultiline
