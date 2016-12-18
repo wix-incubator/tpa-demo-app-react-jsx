@@ -5,96 +5,96 @@ export default class Settings extends React.Component {
     render () {
         return (
             <div>
+                <ul class="comments">
+                    <li>title is missing</li>
+                </ul>
                 <UI.dropDownSelect
-                    defaultValue="expand"
-                    title="When image is clicked"
+                    wix-param="whenImageIsClickedDD"
+                    onChange={(newVal)=>this.props.onUpdate('settings_onImageClick', newVal)}
                     options={[
-                            { value: '1', label: 'Enter expand mode'},
-                            { value: '2', label: 'Show on full screen'},
-                            { value: '3', label: 'Do nothing'}
-                        ]}
-                    onChange={(newVal)=>this.props.onUpdate('settings_onImageClick', newVal)}>
-                </UI.dropDownSelect>
+                        { value: '1', label: 'Enter expand mode'},
+                        { value: '2', label: 'Show on full screen'},
+                        { value: '3', label: 'Do nothing'}
+                    ]}
+                />
 
-                <hr className="divider-long"/>
-                <UI.sectionDividerLabeled label="Enable functionality"/>
-                <hr className="divider-long"/>
+                <UI.divider long={true} />
+                <UI.sectionDividerLabeled>Enable functionality</UI.sectionDividerLabeled>
+                <UI.divider long={true} />
 
-                <div>
-                    <UI.toggleSwitch
-                        label="Allow editing"
-                        defaultValue={true}
-                        onChange={(newVal)=>this.props.onUpdate('settings_allowEditing', newVal)}/>
-                </div>
+                <UI.toggleSwitch
+                    wix-param="allowEditingSwitch"
+                    label="Allow editing"
+                    onChange={(newVal)=>this.props.onUpdate('settings_allowEditing', newVal)}
+                />
 
-                <hr className="divider-long"/>
+                <UI.divider long={true} />
 
-                <div>
-                    <UI.toggleSwitch
-                        label="Allow deleting"
-                        defaultValue={true}
-                        onChange={(newVal)=>this.props.onUpdate('settings_allowDeleting', newVal)}/>
-                </div>
+                <UI.toggleSwitch
+                    wix-param="allowDeletingSwitch"
+                    label="Allow editing"
+                    onChange={(newVal)=>this.props.onUpdate('allowDeletingSwitch', newVal)}
+                />
 
-                <hr className="divider-long"/>
-                <UI.sectionDividerLabeled label="Display info"/>
-                <hr className="divider-long"/>
+                <UI.divider long={true} />
+                <UI.sectionDividerLabeled>Display info</UI.sectionDividerLabeled>
+                <UI.divider long={true} />
 
-                <UI.checkbox value="{this.state.checkboxValue}"
-                             label="Checkbox"
-                             labelAfterSymbol="{true}"
-                             onChange="{this.onCheckboxChange}"
-                             shouldTranslate="{false}">
-                </UI.checkbox>
+                <UI.checkbox
+                    wix-param="settingsCheckboxName"
+                    label="Name"
+                    labelAfterSymbol={true}
+                    onChange={(newVal)=>this.props.onUpdate('settingsCheckboxName', newVal)}
+                />
 
-                <div>
-                    <UI.checkbox
-                        label="Name"
-                        defaultValue={false}
-                        onChange={(newVal)=>this.props.onUpdate('settings_displayName', newVal)}/>
-                </div>
+                <UI.checkbox
+                    wix-param="settingsCheckboxTitle"
+                    label="Title"
+                    labelAfterSymbol={true}
+                    onChange={(newVal)=>this.props.onUpdate('settingsCheckboxTitle', newVal)}
+                />
 
-                <div>
-                    <UI.checkbox
-                        label="Title"
-                        defaultValue={true}
-                        onChange={(newVal)=>this.props.onUpdate('settings_displayTitle', newVal)}/>
-                </div>
+                <UI.checkbox
+                    wix-param="settingsCheckboxDescription"
+                    label="Description"
+                    labelAfterSymbol={true}
+                    onChange={(newVal)=>this.props.onUpdate('settingsCheckboxDescription', newVal)}
+                />
 
-                <div>
-                    <UI.checkbox
-                        label="Description"
-                        defaultValue={true}
-                        onChange={(newVal)=>this.props.onUpdate('settings_displayDescription', newVal)}/>
-                </div>
-
-                <hr className="divider-long"/>
+                <UI.divider long={true} />
 
                 <UI.radioButtons
                     title="Do images show text?"
-                    defaultValue="both"
+                    wix-param="settings_textOnImages"
                     options={[
                             { value: '1', label: 'A title and a description'},
                             { value: '2', label: 'Just a title'},
                             { value: '3', label: 'Just a description'}
                         ]}
-                    onClickPreview={(newVal)=>this.props.onUpdate('settings_textOnImages', newVal)}/>
+                    onChange={(newVal)=>this.props.onUpdate('settings_textOnImages', newVal)}
+                />
 
-                <hr className="divider-long"/>
+                <UI.divider long={true} />
 
+                <ul class="comments">
+                    <li>title is missing, use composite</li>
+                </ul>
                 <UI.textInput
-                    title="Text field"
                     defaultText="Title"
-                    onChange={(newVal)=>this.props.onUpdate('settings_textFieldContent', newVal)}/>
+                    onChange={(newVal)=>this.props.onUpdate('settings_textFieldContent', newVal)}
+                />
 
-                <hr className="divider-long"/>
+                <UI.divider long={true} />
 
-                <UI.textInput
-                    isMultiLine={true}
+                <ul class="comments">
+                    <li>title is missing, use composite</li>
+                </ul>
+                <UI.textInputMultiline
                     title="Text area"
                     focus={true}
                     defaultText="Paragraph"
-                    onChange={(newVal)=>this.props.onUpdate('settings_textAreaContent', newVal)}/>
+                    onChange={(newVal)=>this.props.onUpdate('settings_textAreaContent', newVal)}
+                />
             </div>
         )
     }
