@@ -6,24 +6,32 @@ export default class Animation extends React.Component {
     render() {
         return (
             <div className="animations-tab">
+
+                <ul class="comments">
+                    <li>'Animation' title is missing, use composite</li>
+                </ul>
                 <UI.dropDownSelect
                     defaultValue="slide"
-                    title="Animation"
+                    wix-param="animationType"
                     options={[
                             { value: '1', label: 'Slide'},
                             { value: '2', label: 'Fade'},
                             { value: '3', label: 'Something else'}
                         ]}
-                    onChange={(newVal)=>this.props.onUpdate('animations_type', newVal)}/>
+                    onChange={(newVal)=>this.props.onUpdate('animationType', newVal)}
+                />
 
-                <hr className="divider-long"/>
+                <ul class="comments">
+                    <li>
+                        infoText="info text"
+                        infoTitle="info title"
+                        are missing, no infoIcon, use composites when ready
+                    </li>
+                </ul>
 
-                <UI.sectionDividerLabeled
-                    label="Animation settings"
-                    infoText="info text"
-                    infoTitle="info title"/>
-
-                <hr className="divider-long"/>
+                <UI.divider long={true} />
+                <UI.sectionDividerLabeled>Animation settings</UI.sectionDividerLabeled>
+                <UI.divider long={true} />
 
                 <div className="button-wrapper-center">
                     <UI.button
@@ -34,20 +42,22 @@ export default class Animation extends React.Component {
                     </UI.button>
                 </div>
 
-                <hr className="divider-long"/>
+                <UI.divider long={true} />
 
+                <ul class="comments">
+                    <li>'Direction' title is missing, use composite</li>
+                </ul>
                 <UI.dropDownSelect
-                    defaultValue="right"
-                    title="Direction"
                     options={[
                             { value: '1', label: 'From Top'},
                             { value: '2', label: 'From Right'},
                             { value: '3', label: 'From Bottom'},
                             { value: '4', label: 'From Left'}
                         ]}
-                    onChange={(newVal)=>this.props.onUpdate('animations_direction', newVal)}/>
+                    onChange={(newVal)=>this.props.onUpdate('animations_direction', newVal)}
+                />
 
-                <hr className="divider-long"/>
+                <UI.divider long={true} />
 
                 <UI.slider
                     title="Delay (sec)"
@@ -57,12 +67,12 @@ export default class Animation extends React.Component {
                     defaultValue={0.6}
                     onChange={(newVal)=>this.props.onUpdate('animations_delay', newVal)}/>
 
-                <hr className="divider-long"/>
+                <UI.divider long={true} />
 
                 <div>
                     <UI.toggleSwitch
                         label="Opposite effect"
-                        defaultValue={true}
+                        wix-param="animations_oppositeEffect"
                         onChange={(newVal)=>this.props.onUpdate('animations_oppositeEffect', newVal)}/>
                 </div>
             </div>
