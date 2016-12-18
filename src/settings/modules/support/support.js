@@ -24,34 +24,28 @@ export default class Support extends React.Component {
     onSend () {
         console.log('email:', this.state.email);
         console.log('message:', this.state.message);
-
         console.log('Thanks for reaching out, we will look into it');
-    }
-
-    updateSupportFormState () {
-        var email = this.state.email;
-        var message = this.state.message;
-        this.setState({
-            canSend: email.length && message.length
-        });
     }
 
     render() {
         return (
             <div className="support-tab">
-                <hr className="divider-long"/>
-                <UI.sectionDividerLabeled label="Developer info" />
-                <hr className="divider-long"/>
+                <UI.divider long={true} />
+                <UI.sectionDividerLabeled>Developer info</UI.sectionDividerLabeled>
+                <UI.divider long={true} />
 
+                <ul class="comments">
+                    <li>we are looking for alternative for UI.symbol</li>
+                </ul>
                 <ul className="developer-info">
                     <li><UI.symbol name='email'/> support@wix.com</li>
                     <li><UI.symbol name='globe'/> Developer Website</li>
                     <li><UI.symbol name='phone'/> 1 408 974 4897</li>
                 </ul>
 
-                <hr className="divider-long"/>
-                <UI.sectionDividerLabeled label="Review the app" />
-                <hr className="divider-long"/>
+                <UI.divider long={true} />
+                <UI.sectionDividerLabeled>Review the app</UI.sectionDividerLabeled>
+                <UI.divider long={true} />
 
                 <p className="review-paragraph">Have you enjoyed the app? Spread the word and rate us in the app market</p>
                 <div className="button-wrapper-center">
@@ -60,9 +54,9 @@ export default class Support extends React.Component {
                     </UI.button>
                 </div>
 
-                <hr className="divider-long"/>
-                <UI.sectionDividerLabeled label="Send us a message" />
-                <hr className="divider-long"/>
+                <UI.divider long={true} />
+                <UI.sectionDividerLabeled>Send us a message</UI.sectionDividerLabeled>
+                <UI.divider long={true} />
 
                 <UI.textInput
                     title="What's your email? (optional)"
@@ -70,9 +64,10 @@ export default class Support extends React.Component {
                     placeholder="Email"
                     onChange={
                         val=>this.setEmail(val)
-                    }/>
+                    }
+                />
 
-                <hr className="divider-short"/>
+                <UI.divider/>
 
                 <UI.textInput
                     title="What do you want to tell us?"
@@ -81,15 +76,15 @@ export default class Support extends React.Component {
                     isMultiLine={true}
                     onChange={
                         val=>this.setMessage(val
-                    )}/>
+                    )}
+                />
 
-                <hr className="divider-short"/>
+                <UI.divider/>
 
                 <div className="button-wrapper-center">
                     <UI.button disabled={!this.state.canSend} onClick={()=>this.onSend()}>
                         Send
                     </UI.button>
-
                 </div>
             </div>
         )
