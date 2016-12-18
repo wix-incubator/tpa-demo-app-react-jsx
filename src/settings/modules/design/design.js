@@ -5,9 +5,9 @@ export default class Design extends React.Component {
     render() {
         return (
             <div>
-                <hr className="divider-long"/>
-                <UI.sectionDividerLabeled label="Text & Background"/>
-                <hr className="divider-long"/>
+                <UI.divider long={true} />
+                <UI.sectionDividerLabeled>Text & Background</UI.sectionDividerLabeled>
+                <UI.divider long={true} />
 
                 <UI.fontAndColorPicker
                     title="Title font and color"
@@ -19,7 +19,7 @@ export default class Design extends React.Component {
                     infoText="some information text should be here"
                     onChange={(newVal)=>this.props.onUpdate('Title font and color', newVal)}/>
 
-                <hr className="divider-long"/>
+                <UI.divider long={true} />
 
                 <UI.fontAndColorPicker
                     title="Description font and color"
@@ -31,7 +31,7 @@ export default class Design extends React.Component {
                     infoText="some information text should be here"
                     onChange={(newVal)=>this.props.onUpdate('Description font and color', newVal)}/>
 
-                <hr className="divider-long"/>
+                <UI.divider long={true} />
 
                 <UI.colorPickerSlider
                     title="Background Color"
@@ -40,9 +40,9 @@ export default class Design extends React.Component {
                     startWithOpacity={1}
                     onChange={(newVal)=>this.props.onUpdate('_backgroundColor', newVal)}/>
 
-                <hr className="divider-long"/>
-                <UI.sectionDividerLabeled label="Search Field"/>
-                <hr className="divider-long"/>
+                <UI.divider long={true} />
+                <UI.sectionDividerLabeled>Search Field</UI.sectionDividerLabeled>
+                <UI.divider long={true} />
 
                 <UI.fontAndColorPicker
                     title="Input field font and color"
@@ -54,7 +54,7 @@ export default class Design extends React.Component {
                     infoText="some information text should be here"
                     onChange={(newVal)=>this.props.onUpdate('Input field font and color', newVal)}/>
 
-                <hr className="divider-long"/>
+                <UI.divider long={true} />
 
                 <UI.colorPickerSlider
                     title="Input field Background"
@@ -63,9 +63,9 @@ export default class Design extends React.Component {
                     startWithOpacity={1}
                     onChange={(newVal)=>this.props.onUpdate('_inputFieldBackground', newVal)}/>
 
-                <hr className="divider-long"/>
-                <UI.sectionDividerLabeled label="Button"/>
-                <hr className="divider-long"/>
+                <UI.divider long={true} />
+                <UI.sectionDividerLabeled>Button</UI.sectionDividerLabeled>
+                <UI.divider long={true} />
 
                 <UI.fontAndColorPicker
                     title="Button font and color"
@@ -77,7 +77,7 @@ export default class Design extends React.Component {
                     infoText="some information text should be here"
                     onChange={(newVal)=>this.props.onUpdate('Button font and color', newVal)}/>
 
-                <hr className="divider-long"/>
+                <UI.divider long={true} />
 
                 <UI.colorPickerInput
                     title="Button background"
