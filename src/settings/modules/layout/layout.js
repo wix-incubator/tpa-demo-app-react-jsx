@@ -5,9 +5,9 @@ export default class Layout extends React.Component {
     render() {
         return (
             <div>
-                <hr className="divider-long"/>
-                <UI.sectionDividerLabeled label="How does this gallery look?"/>
-                <hr className="divider-long"/>
+                <UI.divider long={true} />
+                <UI.sectionDividerLabeled>How does this gallery look?</UI.sectionDividerLabeled>
+                <UI.divider long={true} />
 
                 <UI.slider
                     title="Columns"
@@ -16,7 +16,7 @@ export default class Layout extends React.Component {
                     defaultValue={7}
                     onChange={(newVal)=>this.props.onUpdate('layout_columns', newVal)}/>
 
-                <hr className="divider-long"/>
+                <UI.divider long={true} />
 
                 <UI.slider
                     title="Spacing (px)"
