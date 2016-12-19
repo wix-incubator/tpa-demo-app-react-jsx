@@ -34,7 +34,7 @@ export default class Support extends React.Component {
                 <UI.sectionDividerLabeled>Developer info</UI.sectionDividerLabeled>
                 <UI.divider long={true} />
 
-                <ul className="comments">
+                <ul className="comments hide">
                     <li>we are looking for alternative for UI.symbol</li>
                 </ul>
                 <ul className="developer-info">
@@ -48,44 +48,45 @@ export default class Support extends React.Component {
                 <UI.divider long={true} />
 
                 <p className="review-paragraph">Have you enjoyed the app? Spread the word and rate us in the app market</p>
-                <div className="button-wrapper-center">
-                    <UI.button className="btn-confirm-primary" onClick={()=>this.onRateUs()}>
+
+                <UI.Composites.ButtonLargeUnlabeled>
+                    <UI.button className="btn-confirm-primary rate-us-btn" onClick={()=>this.onRateUs()}>
                         Rate Us
                     </UI.button>
-                </div>
+                </UI.Composites.ButtonLargeUnlabeled>
 
                 <UI.divider long={true} />
                 <UI.sectionDividerLabeled>Send us a message</UI.sectionDividerLabeled>
                 <UI.divider long={true} />
 
-                <UI.textInput
-                    title="What's your email? (optional)"
-                    ref="email"
-                    placeholder="Email"
-                    onChange={
-                        val=>this.setEmail(val)
-                    }
-                />
+
+                <UI.Composites.TextInputLabeled>
+                    <UI.textLabel value="What's your email? (optional)" shouldTranslate={false}/>
+                    <UI.textInput
+                        ref="email"
+                        placeholder="Email"
+                        onChange={val=>this.setEmail(val)}
+                    />
+                </UI.Composites.TextInputLabeled>
 
                 <UI.divider/>
 
-                <UI.textInput
-                    title="What do you want to tell us?"
-                    ref="message"
-                    placeholder="Write us your message (new feature idea / other issues)"
-                    isMultiLine={true}
-                    onChange={
-                        val=>this.setMessage(val
-                    )}
-                />
+                <UI.Composites.TextInputLabeled>
+                    <UI.textLabel value="What do you want to tell us?" shouldTranslate={false}/>
+                    <UI.textInputMultiline
+                        ref="message"
+                        placeholder="Write us your message (new feature idea / other issues)"
+                        onChange={val=>this.setMessage(val)}
+                    />
+                </UI.Composites.TextInputLabeled>
 
                 <UI.divider/>
 
-                <div className="button-wrapper-center">
+                <UI.Composites.ButtonLargeUnlabeled>
                     <UI.button disabled={!this.state.canSend} onClick={()=>this.onSend()}>
                         Send
                     </UI.button>
-                </div>
+                </UI.Composites.ButtonLargeUnlabeled>
             </div>
         )
     }

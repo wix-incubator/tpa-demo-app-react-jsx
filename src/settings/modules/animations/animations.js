@@ -6,22 +6,22 @@ export default class Animation extends React.Component {
     render() {
         return (
             <div className="animations-tab">
+                <UI.Composites.DropDownLabeled>
+                    <UI.textLabel value="Animation" shouldTranslate={false}/>
+                    <UI.dropDownSelect
+                        defaultValue="slide"
+                        wix-param="animationType"
+                        options={[
+                                { value: '1', label: 'Slide'},
+                                { value: '2', label: 'Fade'},
+                                { value: '3', label: 'Something else'}
+                            ]}
+                        onChange={(newVal)=>this.props.onUpdate('animationType', newVal)}
+                    />
+                </UI.Composites.DropDownLabeled>
 
-                <ul className="comments">
-                    <li>'Animation' title is missing, use composite</li>
-                </ul>
-                <UI.dropDownSelect
-                    defaultValue="slide"
-                    wix-param="animationType"
-                    options={[
-                            { value: '1', label: 'Slide'},
-                            { value: '2', label: 'Fade'},
-                            { value: '3', label: 'Something else'}
-                        ]}
-                    onChange={(newVal)=>this.props.onUpdate('animationType', newVal)}
-                />
 
-                <ul className="comments">
+                <ul className="comments hide">
                     <li>
                         infoText="info text"
                         infoTitle="info title"
@@ -33,29 +33,30 @@ export default class Animation extends React.Component {
                 <UI.sectionDividerLabeled>Animation settings</UI.sectionDividerLabeled>
                 <UI.divider long={true} />
 
-                <div className="button-wrapper-center">
+                <UI.Composites.ButtonLargeUnlabeled>
                     <UI.button
                         className="btn-confirm-secondary"
                         onClick={()=>this.onPlayAnimation()}>
                         <UI.symbol name="playAnimation"/>
                         Play Animation
                     </UI.button>
-                </div>
+                </UI.Composites.ButtonLargeUnlabeled>
 
                 <UI.divider long={true} />
 
-                <ul className="comments">
-                    <li>'Direction' title is missing, use composite</li>
-                </ul>
-                <UI.dropDownSelect
-                    options={[
+                <UI.Composites.DropDownLabeled>
+                    <UI.textLabel value="Direction" shouldTranslate={false}/>
+                    <UI.dropDownSelect
+                        wix-param="animationDir"
+                        options={[
                             { value: '1', label: 'From Top'},
                             { value: '2', label: 'From Right'},
                             { value: '3', label: 'From Bottom'},
                             { value: '4', label: 'From Left'}
                         ]}
-                    onChange={(newVal)=>this.props.onUpdate('animations_direction', newVal)}
-                />
+                        onChange={(newVal)=>this.props.onUpdate('animations_direction', newVal)}
+                    />
+                </UI.Composites.DropDownLabeled>
 
                 <UI.divider long={true} />
 
@@ -69,12 +70,12 @@ export default class Animation extends React.Component {
 
                 <UI.divider long={true} />
 
-                <div>
+                <UI.Composites.ToggleSwitchUnlabeled>
                     <UI.toggleSwitch
                         label="Opposite effect"
                         wix-param="animations_oppositeEffect"
                         onChange={(newVal)=>this.props.onUpdate('animations_oppositeEffect', newVal)}/>
-                </div>
+                </UI.Composites.ToggleSwitchUnlabeled>
             </div>
         )
     }

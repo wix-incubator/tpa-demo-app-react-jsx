@@ -11,9 +11,12 @@ export default class Main extends React.Component {
                     <br/>
                     Please add a short description of your App + CTA for the main action.
                 </p>
-                <UI.button className="btn-confirm-primary" onClick={()=>this.onClick()}>
-                    Main CTA
-                </UI.button>
+
+                <UI.Composites.ButtonLargeUnlabeled>
+                    <UI.button className="btn-confirm-primary" onClick={()=>this.onClick()}>
+                        Main CTA
+                    </UI.button>
+                </UI.Composites.ButtonLargeUnlabeled>
             </div>
         )
     }

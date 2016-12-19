@@ -20,7 +20,7 @@ const defaultDBValue = {
 
     /* Animations tab */
     animationType: '1',
-    animations_direction: '2',
+    animationDir: '2',
     animations_oppositeEffect: true
 }
 
