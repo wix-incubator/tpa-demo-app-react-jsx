@@ -53,6 +53,9 @@ export default class settings extends React.Component {
                     <UI.panelTab label="Support">
                         <Support onUpdate={this.settingsUpdate}/>
                     </UI.panelTab>
+
+                    <UI.divider/>
+
                     <UI.button className="btn-upgrade-nav">Upgrade</UI.button>
                 </UI.panelTabs>
             </UI.appSettings>
