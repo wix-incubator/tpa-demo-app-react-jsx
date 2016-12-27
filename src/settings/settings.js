@@ -33,7 +33,7 @@ export default class settings extends React.Component {
 
     render () {
         return (
-            <UI.appSettings DBClass={UI.styleParamDB} defaultDBValue={defaultDBValue}>
+            <UI.appSettings defaultDBValue={defaultDBValue}>
                 <UI.panelTabs defaultTabIndex={0}>
                     <UI.panelTab label="Main">
                         <Main onUpdate={this.settingsUpdate}/>
