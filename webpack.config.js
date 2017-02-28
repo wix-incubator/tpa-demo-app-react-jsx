@@ -28,7 +28,11 @@ var webpackConfig = {
             'webpack/hot/only-dev-server',
             __dirname + '/src/settings/App'
             ],
-        widget: __dirname + '/src/widget/widget_main'
+        widget: [
+          'webpack-dev-server/client?http://localhost:3000',
+          'webpack/hot/only-dev-server',
+          __dirname + '/src/widget/widget_main'
+        ]
     },
     output: {
         path: path.join(__dirname, 'dist'),
@@ -51,6 +55,7 @@ var webpackConfig = {
             {test: /\.js$/, exclude: [/node_modules/], loader: 'babel-loader'},
             {test: /\.rt/, loader: "react-templates-loader"},
             {test: /\.css$/, loader: "style-loader!css-loader"},
+            {test: /\.json$/, loader: 'json-loader'},
             {test: /\.scss$/, loader: "style-loader!css-loader!sass-loader?functions=selector-parse&root=" + path.resolve('./js')}
         ]
     }

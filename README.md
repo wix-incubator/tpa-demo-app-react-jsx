@@ -23,12 +23,31 @@ Generate the app:
 `cd tpa-demo-app-react-jsx/`
 3. Install npm
 `npm install`
-4. Run webpack
-`Webpack`
+4. Run build
+`npm run build`
 5. Run the app
 `npm start`
-
 This will run a webserver on your local host. You can now view your app in your browser: http://localhost:3000/
+
+###**Internationalisation**
+The entire app supports dates formating, numbers, and strings, including pluralization and handling translations, using [react-intl](https://github.com/yahoo/react-intl)
+#### Adding new locale
+1. Open app entry point (`src/settings/App.js` for settings app or `src/widget/widget_main.js` for widget app)
+2. Add following lines:
+```JavaScript
+import ruLocale from 'react-intl/locale-data/ru';
+addLocaleData(ruLocale);
+```
+
+#### Translating messages (strings)
+Each app (`src/settings` and `src/widget`) has `lang` dir inside.
+`en.json` will be automatically added to this directory (task: build:langs)
+1. Copy and rename `en.json` to desired locale name e.g. `ru.json`
+2. Translate content of `ru.json`
+See `src/settings/lang/README.md` for messages syntax
+
+#### Language detection
+Currently language is defined by browser (first value of `navigator.languages`)
 
 ###**Registering the App**
 
