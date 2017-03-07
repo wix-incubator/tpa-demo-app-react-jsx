@@ -32,12 +32,12 @@ This will run a webserver on your local host. You can now view your app in your 
 ###**Internationalisation**
 The entire app supports dates formating, numbers, and strings, including pluralization and handling translations, using [react-intl](https://github.com/yahoo/react-intl)
 #### Adding new locale
-1. Open app entry point (`src/settings/App.js` for settings app or `src/widget/widget_main.js` for widget app)
-2. Add following lines:
-```JavaScript
-import ruLocale from 'react-intl/locale-data/ru';
-addLocaleData(ruLocale);
-```
+Add comma separated locales to environment variable `WIX_TPA_LOCALES`
+Example:
+* for development `WIX_TPA_LOCALES=en,ru npm run start`
+* for deploying `WIX_TPA_LOCALES=en,ru npm run build`
+
+There is no need to do any importing or preloading, it is served automatically
 
 #### Translating messages (strings)
 Each app (`src/settings` and `src/widget`) has `lang` dir inside.

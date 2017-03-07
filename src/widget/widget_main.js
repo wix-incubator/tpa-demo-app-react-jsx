@@ -1,36 +1,22 @@
 import React from 'react'
 import ReactDOM from  'react-dom';
-import {addLocaleData, IntlProvider} from 'react-intl';
-import enLocale from 'react-intl/locale-data/en';
-import Widget from './widget'
+import bundleLoaderI18n from '../../scripts/bundle-loader-i18n';
+import {IntlProvider} from 'react-intl';
+import App from './widget'
 import './widget.scss';
 
-// TODO: add Intl polyfill for old browsers with require.ensure after issue wds
-// TODO: load current locale with require ensure
+let rootInstance;
 
-addLocaleData(enLocale);
-// Detect user's language from a browser
-const
-  locale = (navigator.languages && navigator.languages[0]) ||
-    navigator.language ||
-    navigator.userLanguage,
-  allMessages = {};
+bundleLoaderI18n(renderRootComponent, 'widget');
 
-// TODO: use require.ensure after solving issue with webpack-dev-server
-// TODO: require.ensure only for current locale
-const req = require.context('./lang', false, /\.json$/);
-req.keys().forEach((item) => {
-  const lng = item.split('./').pop().split('.')[0];
-  allMessages[lng] = req(item);
-});
-const messages = allMessages[locale] || allMessages.en;
-
-const rootInstance = ReactDOM.render(
-  <IntlProvider locale={locale} messages={messages}>
-    <Widget/>
-  </IntlProvider>,
-  document.getElementById('root')
-);
+function renderRootComponent(locale, messages) {
+  return ReactDOM.render(
+    <IntlProvider locale={locale} messages={messages}>
+      <App/>
+    </IntlProvider>,
+    document.getElementById('root')
+  );
+}
 
 if (module.hot) {
   module.hot.accept();

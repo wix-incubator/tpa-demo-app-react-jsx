@@ -10,7 +10,7 @@ export default class Main extends React.Component {
     render () {
         return (
             <div className="main-tab">
-                <img className="app-logo" src="logo.svg" alt="app logo"/>
+                <img className="app-logo" src={require('./logo.svg')} alt="app logo"/>
                 <p className="app-description">
                   <FormattedMessage
                     id="settings.main.intro"
