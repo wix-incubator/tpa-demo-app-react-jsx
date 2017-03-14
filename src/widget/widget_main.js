@@ -10,7 +10,7 @@ let rootInstance;
 bundleLoaderI18n(renderRootComponent, 'widget');
 
 function renderRootComponent(locale, messages) {
-  return ReactDOM.render(
+  rootInstance = ReactDOM.render(
     <IntlProvider locale={locale} messages={messages}>
       <App/>
     </IntlProvider>,
