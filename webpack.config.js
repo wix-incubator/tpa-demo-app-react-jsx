@@ -32,6 +32,7 @@ var webpackConfig = {
     },
     output: {
         path: path.join(__dirname, 'dist'),
+        publicPath: '/dist/',
         sourceMapFilename: "debugging/[file].map",
         filename: '[name].js'
     },
