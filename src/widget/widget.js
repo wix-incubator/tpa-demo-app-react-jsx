@@ -1,3 +1,5 @@
+import { FormattedMessage } from 'react-intl';
+
 define(['react', 'Wix'], function (React, Wix) {
     return React.createClass({
         getInitialState: () => {
@@ -41,7 +43,16 @@ define(['react', 'Wix'], function (React, Wix) {
                 <div>
                     <div className="wix-style-sample">
                         <h3 className="sample-element sample-title">Demo App</h3>
-                        <p className="sample-element sample-content">Welcome to the Wix Demo App, let's play!</p>
+                        <p className="sample-element sample-content">
+                          <FormattedMessage
+                            id="app.widget.greet"
+                            description="Widget greeting"
+                            defaultMessage="Welcome to the {name}, let's play!"
+                            values={{
+                              name: 'Wix Demo App'
+                            }}
+                          />
+                        </p>
                         <form className="form">
                             <input title="email" type="email" className="sample-element sample-input" placeholder="Enter text here" value={this.props.email}/>
                         </form>

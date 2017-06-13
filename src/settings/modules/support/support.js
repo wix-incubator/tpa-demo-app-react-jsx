@@ -1,3 +1,5 @@
+import { FormattedMessage } from 'react-intl';
+
 export default class Support extends React.Component {
     constructor (props) {
         super(props);
@@ -53,7 +55,12 @@ export default class Support extends React.Component {
                 <UI.sectionDividerLabeled label="Review the app" />
                 <hr className="divider-long"/>
 
-                <p className="review-paragraph">Have you enjoyed the app? Spread the word and rate us in the app market</p>
+                <p className="review-paragraph">
+                  <FormattedMessage
+                    id="settings.support.enjoy"
+                    defaultMessage="Have you enjoyed the app? Spread the word and rate us in the app market"
+                  />
+                </p>
                 <div className="button-wrapper-center">
                     <UI.button
                         className="btn-confirm-primary"

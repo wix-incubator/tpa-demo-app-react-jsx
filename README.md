@@ -23,12 +23,31 @@ Generate the app:
 `cd tpa-demo-app-react-jsx/`
 3. Install npm
 `npm install`
-4. Run webpack
-`Webpack`
+4. Run build
+`npm run build`
 5. Run the app
 `npm start`
-
 This will run a webserver on your local host. You can now view your app in your browser: http://localhost:3000/
+
+###**Internationalisation**
+The entire app supports dates formating, numbers, and strings, including pluralization and handling translations, using [react-intl](https://github.com/yahoo/react-intl)
+#### Adding new locale
+Add comma separated locales to environment variable `WIX_TPA_LOCALES`
+Example:
+* for development `WIX_TPA_LOCALES=en,ru npm run start`
+* for deploying `WIX_TPA_LOCALES=en,ru npm run build`
+
+There is no need to do any importing or preloading, it is served automatically
+
+#### Translating messages (strings)
+Each app (`src/settings` and `src/widget`) has `lang` dir inside.
+`en.json` will be automatically added to this directory (task: build:langs)
+1. Copy and rename `en.json` to desired locale name e.g. `ru.json`
+2. Translate content of `ru.json`
+See `src/settings/lang/README.md` for messages syntax
+
+#### Language detection
+Currently language is defined by browser (first value of `navigator.languages`)
 
 ###**Registering the App**
 

@@ -1,25 +1,40 @@
 {
   "name": "tpa-demo-app-react-jsx",
   "scripts": {
-    "start": "node server.js"
+    "start": "./node_modules/.bin/cross-env node server.js",
+    "build:run": "./node_modules/.bin/cross-env ./node_modules/.bin/webpack",
+    "build:langs": "./node_modules/.bin/cross-env ./node_modules/.bin/babel-node scripts/translate.js",
+    "build": "npm run build:langs && npm run build:run"
   },
-  "version": "0.0.1",
+  "version": "0.1.2",
   "dependencies": {
+    "async": "^2.1.5",
+    "intl": "^1.2.5",
     "react": "^15.3.0",
-    "react-dom": "^15.3.0"
+    "react-dom": "^15.3.0",
+    "react-intl": "^2.2.3"
   },
   "devDependencies": {
+    "babel-cli": "^6.23.0",
     "babel-core": "^6.3.26",
     "babel-loader": "^6.2.0",
+    "babel-plugin-react-intl": "^2.3.1",
     "babel-preset-es2015": "^6.5.0",
     "babel-preset-react": "^6.5.0",
+    "bundle-loader": "^0.5.5",
+    "cross-env": "^3.1.4",
     "css-loader": "^0.23.1",
+    "file-loader": "^0.10.1",
+    "glob": "^7.1.1",
+    "json-loader": "^0.5.4",
+    "mkdirp": "^0.5.1",
     "node-sass": "^3.4.2",
+    "react-hot-loader": "^1.3.0",
+    "rimraf": "^2.6.1",
     "sass-loader": "^3.2.0",
     "script-loader": "^0.6.1",
     "style-loader": "^0.13.0",
     "webpack": "^1.12.14",
-    "webpack-dev-server": "^1.14.1",
-    "react-hot-loader": "^1.3.0"
+    "webpack-dev-server": "^1.14.1"
   }
 }
