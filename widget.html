@@ -26,25 +26,50 @@
         }
 
         .sample-button {
+            cursor: pointer;
             background: {{style._btnBgColor color-8}};
             color: {{style._btnTextColor color-1}};
             {{style._btnFont Body-M}}
         }
+
         .sample-button:hover {
-        background: {{color-7}};
-        opacity: 0.75;
+            opacity: 0.8;
         }
 
         .sample-input {
-            background:{{style._inputFieldBackground color-1}};
-            color: {{style._inputColor color-3}};
             {{style._inputFont Body-M}}
             border:1px solid black;
+            background: {{style._inputFieldBackground color-4}};
+            color: {{style._inputColor color-1}};
+        }
+        .sample-input::placeholder {
+          color: {{style.inputCologr color-1}};
+          opacity: 0.7;
+        }
+
+        a {
+          color: {{style._linkColor color-8}};
+          text-decoration: underline;
+          cursor:pointer;
+        }
+
+        a:hover {
+          opacity: 0.8;
+          text-decoration: none;
+        }
+
+        body {
+          border:1px solid {{style._borderColor color-2}};
+        }
+
+        hr {
+          background-color: {{style._hrColor color-2}};
+          height: 1px; border: 0;
         }
     </style>
 </head>
-<body>
-<div id="root"></div>
-<script src="dist/widget.js"></script>
-</body>
+  <script src="dist/widget.js"></script>
 </html>
+<body>
+  <div id="root"></div>
+</body>

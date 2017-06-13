@@ -73,14 +73,14 @@ export default class Settings extends React.Component {
                         ]}
                     onClickPreview={(newVal)=>this.props.onUpdate('settings_textOnImages', newVal)}/>
 
-                <hr className="divider-long"/>
+                  <hr className="divider-long"/>
 
                 <UI.textInput
                     title="Text field"
                     defaultText="Title"
                     onChange={(newVal)=>this.props.onUpdate('settings_textFieldContent', newVal)}/>
 
-                <hr className="divider-long"/>
+                  <hr className="divider-long"/>
 
                 <UI.textInput
                     isMultiLine={true}
