@@ -24,9 +24,9 @@ export default class settings extends React.Component {
                     <Layout tab="Layout" onUpdate={this.settingsUpdate}/>
                     <Design tab="Design" onUpdate={this.settingsUpdate}/>
                     <Animations tab="Animations" onUpdate={this.settingsUpdate}/>
-                    <Support tab="Support"/>
                     <hr className="divider-short"/>
-                    <UI.button label="Upgrade" className="btn-upgrade-nav"/>
+                    <Support tab="Support"/>
+                    <UI.button label="Upgrade" className="btn-upgrade-nav" onClick={() => Wix.Settings.openBillingPage()}/>
                 </UI.panelTabs>
             </UI.appSettings>
         )

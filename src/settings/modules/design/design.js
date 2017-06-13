@@ -15,7 +15,6 @@ export default class Design extends React.Component {
                     wix-param-color="_titleColor"
                     startWithColor="color-5"
                     startWithTheme="font_4"
-                    infoTitle="some info title"
                     infoText="some information text should be here"
                     onChange={(newVal)=>this.props.onUpdate('Title font and color', newVal)}/>
 
@@ -27,7 +26,6 @@ export default class Design extends React.Component {
                     wix-param-color="_descColor"
                     startWithColor="color-4"
                     startWithTheme="font_8"
-                    infoTitle="some info title"
                     infoText="some information text should be here"
                     onChange={(newVal)=>this.props.onUpdate('Description font and color', newVal)}/>
 
@@ -45,12 +43,11 @@ export default class Design extends React.Component {
                 <hr className="divider-long"/>
 
                 <UI.fontAndColorPicker
-                    title="Input field font and color"
+                    title="Input field text font and color"
                     wix-param-font="_inputFont"
                     wix-param-color="_inputColor"
-                    startWithColor="color-3"
+                    startWithColor="color-1"
                     startWithTheme="font_8"
-                    infoTitle="some info title"
                     infoText="some information text should be here"
                     onChange={(newVal)=>this.props.onUpdate('Input field font and color', newVal)}/>
 
@@ -59,11 +56,29 @@ export default class Design extends React.Component {
                 <UI.colorPickerSlider
                     title="Input field Background"
                     wix-param="_inputFieldBackground"
-                    startWithColor="color-1"
+                    startWithColor="color-4"
                     startWithOpacity={1}
                     onChange={(newVal)=>this.props.onUpdate('_inputFieldBackground', newVal)}/>
 
                 <hr className="divider-long"/>
+
+                <UI.colorPickerSlider
+                    title="Border Color"
+                    wix-param="_borderColor"
+                    startWithColor="color-2"
+                    startWithOpacity={1}
+                    onChange={(newVal)=>this.props.onUpdate('_borderColor', newVal)}/>
+
+                <hr className="divider-long"/>
+
+                <UI.colorPickerSlider
+                    title="Divider Color"
+                    wix-param="_hrColor"
+                    startWithColor="color-2"
+                    startWithOpacity={1}
+                    onChange={(newVal)=>this.props.onUpdate('_hrColor', newVal)}/>
+
+              <hr className="divider-long"/>
                 <UI.sectionDividerLabeled label="Button"/>
                 <hr className="divider-long"/>
 
@@ -73,7 +88,6 @@ export default class Design extends React.Component {
                     wix-param-color="_btnTextColor"
                     startWithColor="color-1"
                     startWithTheme="font_8"
-                    infoTitle="some info title"
                     infoText="some information text should be here"
                     onChange={(newVal)=>this.props.onUpdate('Button font and color', newVal)}/>
 
@@ -83,7 +97,8 @@ export default class Design extends React.Component {
                     title="Button background"
                     wix-param="_btnBgColor"
                     startWithColor="color-8"
-                    onChange={(newVal)=>this.props.onUpdate('_btnBgColor', newVal)}/>
+                    onChange={(newVal)=>this.props.onUpdate('_btnBgColor', newVal)}
+                    />
             </div>
         )
     }

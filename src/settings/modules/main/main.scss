@@ -7,11 +7,11 @@
   .app-logo {
     height: $logo-radius;
     width: $logo-radius;
-    margin: 20px auto 0;
+    margin: 24px auto 12px;
     position: relative;
   }
 
-  .app-description {
+  p {
     text-align: center;
     padding: 0 $padding;
     line-height: 21px;
@@ -21,5 +21,12 @@
 
   .main-cta-btn {
     width: 180px;
+  }
+
+  .main-bottom {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
   }
 }

@@ -20,8 +20,7 @@ export default class Animation extends React.Component {
 
                 <UI.sectionDividerLabeled
                     label="Animation settings"
-                    infoText="info text"
-                    infoTitle="info title"/>
+                    infoText="info text"/>
 
                 <hr className="divider-long"/>
 
