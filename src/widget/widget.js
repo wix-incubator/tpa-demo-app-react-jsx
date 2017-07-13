@@ -8,7 +8,7 @@ define(['react', 'Wix'], function (React, Wix) {
         },
         componentDidMount: function () {
             this.updateCompHeight(600);
-            Wix.addEventListener(Wix.Events.STYLE_PARAMS_CHANGE, (data) => console.log(data));
+            Wix.addEventListener(Wix.Events.SETTINGS_UPDATED, (data) => this.onSettingsUpdate(data));
 
             // You can get the style params programmatically, un-comment the following snippet to see how it works:
             /*Wix.Styles.getStyleParams(function (style) {
