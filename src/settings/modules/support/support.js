@@ -8,7 +8,6 @@ export default class Support extends React.Component {
     }
     onRateUs () {
         console.log('Thanks for rating us, you rock!');
-        this.setState({dis: !this.state.dis});
         Wix.Settings.openReviewInfo();
     }
     setEmail (email) {

@@ -21,7 +21,7 @@ export default class Main extends React.Component {
                   <p>
                     Upgrade now to get a lot more features and enjoy everything our app has to offer!
                   </p>
-                  <UI.button label="Upgrade Now" className="btn-upgrade" onClick={() => Wix.Settings.openBillingPage()}/>
+                  <UI.button label="Upgrade Now" className="btn-upgrade-banner" onClick={() => Wix.Settings.openBillingPage()}/>
                 </div>
             </div>
         )
