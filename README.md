@@ -40,6 +40,7 @@ This will run a webserver on your local host. You can now view your app in your 
   * http://localhost:3000/settings.html
   * Set the height (up to 578px). 
 4. Save your app.
+5. In order to test widget in wix editor we need to disable SSL in the editor: go to site -> site manager -> SSL Certificate and disable SSL.
 
 
 ###**License**
