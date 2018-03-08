@@ -1,13 +1,13 @@
 // * fonts helvetica */
 
-// *@import url("http://fast.fonts.com/t/1.css?apiType=css&projectid=33bd0973-5b82-45be-bb77-837225874dfe");*/
+// *@import url("https://fast.fonts.com/t/1.css?apiType=css&projectid=33bd0973-5b82-45be-bb77-837225874dfe");*/
 
 // Moved to editor.js
 //html {
-//  background-image: url("http://fast.fonts.com/t/1.css?apiType=css&projectid=33bd0973-5b82-45be-bb77-837225874dfe");
+//  background-image: url("https://fast.fonts.com/t/1.css?apiType=css&projectid=33bd0973-5b82-45be-bb77-837225874dfe");
 //}
 
-$fonts-static-url: "http://static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/";
+$fonts-static-url: "https://static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/";
 
 @function create-font-url($file-name, $format) {
   @return unquote('url("#{$fonts-static-url}#{$file-name}.#{$format}?1") format("#{$format}")');
