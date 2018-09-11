@@ -18,7 +18,15 @@ define(['react', 'Wix'], function (React, Wix) {
         componentDidMount: function () {
             Wix.addEventListener(Wix.Events.SETTINGS_UPDATED, (data) => this.onSettingsUpdate(data));
             Wix.addEventListener(Wix.Events.SITE_PUBLISHED, (data) => this.onSitePublished(data));
-            
+            Wix.addEventListener(Wix.Events.SITE_SAVED, (data) => this.onSiteSaved(data));
+
+            this.loadFirebaseData("settings");
+            // This is a pseudo code, as I couldn't find a way to determine if loaded via the Editor or website
+            if ("isEditor" == true) {
+                this.loadFirebaseData("savedSettings");    
+            }            
+        },
+        loadFirebaseData: function (collection) {
             var config = {
                 apiKey: "AIzaSyCrEcfR6yAPz2mm_EK5_dg5auPTdsuK5Lo",
                 authDomain: "wix-test-billy.firebaseapp.com",
@@ -31,11 +39,9 @@ define(['react', 'Wix'], function (React, Wix) {
             this.state.db = firebase.firestore();
             this.state.db.settings({ timestampsInSnapshots: true });
 
-            
-
             var app_id = Wix.Utils.getInstanceId();
 
-            this.state.db.collection('settings').doc(app_id).get()
+            this.state.db.collection(collection).doc(app_id).get()
             .then((snapshot) => {
                 if (snapshot.data()) {
                     $.each(snapshot.data(),(DBKey, DBValue) => {
@@ -110,7 +116,12 @@ define(['react', 'Wix'], function (React, Wix) {
         },
         onSitePublished: function() {
             var app_id = Wix.Utils.getInstanceId();
-            this.state.db.collection('settings').doc(app_id).update(this.state.settingsToSave);
+            this.state.db.collection('savedSettings').doc(app_id).set(this.state.settingsToSave, {merge:true});
+            this.state.db.collection('settings').doc(app_id).set(this.state.settingsToSave, {merge:true});
+        },
+        onSiteSaved: function() {
+            var app_id = Wix.Utils.getInstanceId();
+            this.state.db.collection('savedSettings').doc(app_id).set(this.state.settingsToSave, {merge:true});
         },
         updateCompHeight: (height) => {
             const desiredHeight = height || document.documentElement.scrollHeight;
