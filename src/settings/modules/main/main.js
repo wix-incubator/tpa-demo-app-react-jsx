@@ -3,19 +3,22 @@ import React from 'react'
 
 export default class Main extends React.Component {
     onClick () {
-        console.log('This is your call-to-action, take it seriously');
+        console.log('CTA clicked');
     }
 
     render () {
         return (
             <div className="main-tab">
-                <img className="app-logo" src="logo.svg" alt="app logo"/>
+                <img className="app-logo" src="https://seeklogo.com/images/R/rss-icon-logo-025B789EB6-seeklogo.com.png" alt="RSS LOGO"/>
                 <p>
-                    This is the Wix App settings demo.
-                    <br/>
-                    Please add a short description of your App + CTA for the main action.
+                    Display your latest news or posts in a beautiful news ticker.
                 </p>
-                <UI.button className="btn-confirm-primary" label="Main CTA" onClick={()=>this.onClick()}/>
+                <br/>
+                <p>
+                    Click to connect your feed.
+                </p>
+                <UI.button className="btn-confirm-primary" label="Connect feed"/>
+
                 <div className="main-bottom">
                   <hr className="divider-long"/>
                   <p>

@@ -30,6 +30,9 @@ var webpackConfig = {
             ],
         widget: __dirname + '/src/widget/widget_main'
     },
+    headers: {
+    "Access-Control-Allow-Origin": "https://localhost:3000"
+    },
     output: {
         path: path.join(__dirname, 'dist'),
         publicPath: '/dist/',

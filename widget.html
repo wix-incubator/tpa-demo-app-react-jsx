@@ -2,23 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Demo App - Widget</title>
+    <title>Billy Test - News Feed Ticker</title>
 
     <script src="//static.parastorage.com/services/third-party/react/15.3.1/react-with-addons.min.js"></script>
     <script src="//static.parastorage.com/services/third-party/react/15.3.1/react-dom.min.js"></script>
     <script src="//static.parastorage.com/services/third-party/jquery/3.1.1/dist/jquery.min.js"></script>
     <script src="//static.parastorage.com/services/third-party/lodash/4.17.2/lodash.js"></script>
     <script src="//static.parastorage.com/services/js-sdk/1.91.0/js/wix.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
+
+
+
 
     <style wix-style>
+
+        .news-type {
+            {{style._titleFont Body-M}}
+            color: {{style._titleColor color-5}};
+        }
+        .news-headline {
+          {{style._headlineFont Body-M}}
+          color: {{style._headlineColor color-5}};
+         
+        }
+        .news-bg {
+          background: {{style._backgroundColor color-1}};
+        }
+
         .wix-style-sample {
             background: {{style._backgroundColor color-1}};
         }
 
-        .sample-title {
-            {{style._titleFont Heading-L}}
-            color: {{style._titleColor color-5}};
-        }
+        
 
         .sample-content {
             {{style._descFont Body-M}}
@@ -59,6 +74,7 @@
         }
 
         body {
+          margin: 0!important;
           border:1px solid {{style._borderColor color-2}};
         }
 
@@ -66,6 +82,7 @@
           background-color: {{style._hrColor color-2}};
           height: 1px; border: 0;
         }
+        
     </style>
 </head>
   <script src="dist/widget.js"></script>
