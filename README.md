@@ -1,5 +1,4 @@
 # Wix News Ticker
-###**Overview**
 
 Just enter a valid RSS feed and the ticker will show 5 most recent titles.
 You have control over the look and feel of it, just click on Settings to configure
