@@ -20,10 +20,11 @@ define(['react', 'Wix'], function (React, Wix) {
             Wix.addEventListener(Wix.Events.SITE_PUBLISHED, (data) => this.onSitePublished(data));
             Wix.addEventListener(Wix.Events.SITE_SAVED, (data) => this.onSiteSaved(data));
 
-            this.loadFirebaseData("settings");
-            // This is a pseudo code, as I couldn't find a way to determine if loaded via the Editor or website
-            if ("isEditor" == true) {
+            var queryParams = simpleQueryString.parse(location.search);
+            if (queryParams.viewMode == "editor") {
                 this.loadFirebaseData("savedSettings");    
+            } else {
+                this.loadFirebaseData("settings");
             }            
         },
         loadFirebaseData: function (collection) {
@@ -149,8 +150,6 @@ define(['react', 'Wix'], function (React, Wix) {
                 return (
                     <div className="news-headline" style={{display:i != 0 ? "none" : "show"}}> {post.title} <span className="news-time">({post.pubDate})</span></div>
                 );
-                
-
             });
             content = posts;
           }
