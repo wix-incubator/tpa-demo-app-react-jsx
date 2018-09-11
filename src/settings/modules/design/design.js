@@ -59,9 +59,7 @@ export default class Design extends React.Component {
                         wix-param-color="_headlineColor"
                         startWithColor="color-5"
                         startWithTheme="font_8"
-                        infoText="some information text should be here"
-                        onChange={(newVal)=>this.props.onUpdate('Description font and color', newVal)}/>
-
+                        infoText="some information text should be here"/>
                 </div>
             </div>
         )

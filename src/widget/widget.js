@@ -2,9 +2,7 @@ define(['react', 'Wix'], function (React, Wix) {
     return React.createClass({
         getInitialState: () => {
             return {
-                settingsUpdate: {},
                 title_text: "Latest",
-                showBox  : false,
                 posts: [],
                 postIndex: 0,
                 postToShow: 5,
@@ -78,11 +76,6 @@ define(['react', 'Wix'], function (React, Wix) {
             } 
             
             console.log("settingsToSave: " + this.state.settingsToSave);
-
-            this.setState({
-                settingsUpdate: update,
-                showBox: true
-            }, this.updateCompHeight);
         },
         loadFeed: function(feed) {
             $.get(feed, (response) => {
@@ -124,31 +117,14 @@ define(['react', 'Wix'], function (React, Wix) {
             var app_id = Wix.Utils.getInstanceId();
             this.state.db.collection('savedSettings').doc(app_id).set(this.state.settingsToSave, {merge:true});
         },
-        updateCompHeight: (height) => {
-            const desiredHeight = height || document.documentElement.scrollHeight;
-            Wix.setHeight(desiredHeight);
-        },
-        navToHome: () => {
-          Wix.getSiteMap(pages => {
-            Wix.navigateToPage(pages[0].pageId.substring(1));
-          });
-        },
-        stringify: (input) => {
-            try {
-                return JSON.stringify(input, null, 4);
-            } catch (err) {
-                return input;
-            }
-        },
         render: function () {
-          const {settingsUpdate} = this.state;
           var content;
           if (this.state.isLoading) {
             content =  <div className="news-headline"> Loading... </div>;
           } else {
             var posts = this.state.posts.map(function(post,i){
                 return (
-                    <div className="news-headline" style={{display:i != 0 ? "none" : "show"}}> {post.title} <span className="news-time">({post.pubDate})</span></div>
+                    <div className="news-headline" style={{display:i != 0 ? "none" : "initial"}}> {post.title} <span className="news-time">({post.pubDate})</span></div>
                 );
             });
             content = posts;

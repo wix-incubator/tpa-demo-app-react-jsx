@@ -12,7 +12,6 @@ export default class Settings extends React.Component {
                     validator={function(value) {
                         var expression = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
                         var regex = new RegExp(expression);
-                        var t = 'www.google.com';
                         return value.match(regex);
                     }}
                     title="Paste you RSS feed URL here"
@@ -31,11 +30,11 @@ export default class Settings extends React.Component {
                        units="posts"
                        step={1}
                        defaultValue={5}
-                       onChange="(newVal)=>this.props.onUpdate('layout_spacing', newVal)">
+                       onChange={(newVal)=>this.props.onUpdate('layout_spacing', newVal)}>
                 </UI.slider>
                 <UI.toggleSwitch
                     label="Post are clickable?"
-                    defaultValue='{true}'
+                    defaultValue={true}
                     onChange={(newVal)=>console.log(newVal)}>
             </UI.toggleSwitch>
                                  
