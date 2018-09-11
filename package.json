@@ -5,6 +5,8 @@
   },
   "version": "0.0.1",
   "dependencies": {
+    "firebase": "^5.4.2",
+    "query-string": "^6.1.0",
     "react": "^15.3.0",
     "react-dom": "^15.3.0"
   },

@@ -1,6 +1,7 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var widget = require('./widget');
+var firebase = require('firebase')
 var $ = require('jquery');
 require('./widget.scss');
 

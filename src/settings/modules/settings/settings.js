@@ -5,89 +5,42 @@ export default class Settings extends React.Component {
     render () {
         return (
             <div>
-                <UI.dropDownSelect
-                    defaultValue="expand"
-                    title="When image is clicked"
-                    options={[
-                            { value: '1', label: 'Enter expand mode'},
-                            { value: '2', label: 'Show on full screen'},
-                            { value: '3', label: 'Do nothing'}
-                        ]}
-                    onChange={(newVal)=>this.props.onUpdate('settings_onImageClick', newVal)}>
-                </UI.dropDownSelect>
-
                 <hr className="divider-long"/>
-                <UI.sectionDividerLabeled label="Enable functionality"/>
+                    <UI.sectionDividerLabeled label="Set up your RSS feed"/>
                 <hr className="divider-long"/>
-
-                <div>
-                    <UI.toggleSwitch
-                        label="Allow editing"
-                        defaultValue={true}
-                        onChange={(newVal)=>this.props.onUpdate('settings_allowEditing', newVal)}/>
+                <UI.textInputWithButton
+                    validator={function(value) {
+                        var expression = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
+                        var regex = new RegExp(expression);
+                        return value.match(regex);
+                    }}
+                    title="Paste you RSS feed URL here"
+                    placeholder="http://www.domain.com/feed.xml"
+                    infoText="If you are using a wix blog, your RSS feed would be {your domain}.com/feed.xml"
+                    invalidMessage="Doesn't seem like a valid URL"
+                    onButtonClick={(newVal)=>this.props.onUpdate('feed_url', newVal)}
+                    defaultText={this.props.savedSettings.feed_url}
+                    buttonText="Confirm"/>
+                <div className="coming-soon">
+                <div className="coming-soon-title">Coming soon</div>
+                    <UI.slider
+                       title="How many posts to show"
+                       min={1}
+                       max={20}
+                       units="posts"
+                       step={1}
+                       defaultValue={5}
+                       onChange={(newVal)=>this.props.onUpdate('layout_spacing', newVal)}>
+                </UI.slider>
+                <UI.toggleSwitch
+                    label="Post are clickable?"
+                    defaultValue={true}
+                    onChange={(newVal)=>console.log(newVal)}>
+            </UI.toggleSwitch>
+                                 
+                                 
+                                 
                 </div>
-
-                <hr className="divider-long"/>
-
-                <div>
-                    <UI.toggleSwitch
-                        label="Allow deleting"
-                        defaultValue={true}
-                        onChange={(newVal)=>this.props.onUpdate('settings_allowDeleting', newVal)}/>
-                </div>
-
-                <hr className="divider-long"/>
-                <UI.sectionDividerLabeled label="Display info"/>
-                <hr className="divider-long"/>
-
-                <div>
-                    <UI.checkbox
-                        label="Name"
-                        defaultValue={false}
-                        onChange={(newVal)=>this.props.onUpdate('settings_displayName', newVal)}/>
-                </div>
-
-                <div>
-                    <UI.checkbox
-                        label="Title"
-                        defaultValue={true}
-                        onChange={(newVal)=>this.props.onUpdate('settings_displayTitle', newVal)}/>
-                </div>
-
-                <div>
-                    <UI.checkbox
-                        label="Description"
-                        defaultValue={true}
-                        onChange={(newVal)=>this.props.onUpdate('settings_displayDescription', newVal)}/>
-                </div>
-
-                <hr className="divider-long"/>
-
-                <UI.radioButtons
-                    title="Do images show text?"
-                    defaultValue="both"
-                    options={[
-                            { value: '1', label: 'A title and a description'},
-                            { value: '2', label: 'Just a title'},
-                            { value: '3', label: 'Just a description'}
-                        ]}
-                    onClickPreview={(newVal)=>this.props.onUpdate('settings_textOnImages', newVal)}/>
-
-                  <hr className="divider-long"/>
-
-                <UI.textInput
-                    title="Text field"
-                    defaultText="Title"
-                    onChange={(newVal)=>this.props.onUpdate('settings_textFieldContent', newVal)}/>
-
-                  <hr className="divider-long"/>
-
-                <UI.textInput
-                    isMultiLine={true}
-                    title="Text area"
-                    focus={true}
-                    defaultText="Paragraph"
-                    onChange={(newVal)=>this.props.onUpdate('settings_textAreaContent', newVal)}/>
             </div>
         )
     }
