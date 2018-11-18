@@ -7,7 +7,7 @@ export default class Support extends React.Component {
         }
     }
     onRateUs () {
-        console.log('Thanks for rating us, you rock!');
+        console.log('Rating complete');
         Wix.Settings.openReviewInfo();
     }
     setEmail (email) {
@@ -30,7 +30,7 @@ export default class Support extends React.Component {
         console.log('email:', this.state.email);
         console.log('message:', this.state.message);
 
-        console.log('Thanks for reaching out, we will look into it');
+        console.log('Message Sent');
     }
     validateEmail(email) {
       let reg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -46,7 +46,7 @@ export default class Support extends React.Component {
         return (
             <div className="support-tab">
                 <hr className="divider-long"/>
-                <UI.sectionDividerLabeled label="Developer info" />
+                <UI.sectionDividerLabeled label="Developer Info" />
                 <hr className="divider-long"/>
 
                 <ul className="developer-info">
@@ -56,23 +56,23 @@ export default class Support extends React.Component {
                 </ul>
 
                 <hr className="divider-long"/>
-                <UI.sectionDividerLabeled label="Review Our App" />
+                <UI.sectionDividerLabeled label="App Review" />
                 <hr className="divider-long"/>
 
                 <p className="review-paragraph">{"Enjoying \<app name\>? Leave us a review in the App Market."}</p>
                 <div className="button-wrapper-center">
                     <UI.button
                         className="btn-confirm-primary"
-                        label="Rate Us"
+                        label="Review Us"
                         onClick={()=>this.onRateUs()}/>
                 </div>
 
                 <hr className="divider-long"/>
-                <UI.sectionDividerLabeled label="Send us a message" />
+                <UI.sectionDividerLabeled label="Connect With Us" />
                 <hr className="divider-long"/>
 
                 <UI.textInput
-                    title="What's your email?"
+                    title="What's your email? (optional)"
                     ref="email"
                     placeholder="Email"
                     validator={this.validateEmail}
@@ -85,9 +85,9 @@ export default class Support extends React.Component {
                 <hr className="divider-short"/>
 
                 <UI.textInput
-                    title="What do you want to tell us?"
+                    title="Comments"
                     ref="message"
-                    placeholder="Write us your message (new feature idea / other issues)"
+                    placeholder="We'd love to hear from you. Send us a message."
                     isMultiLine={true}
                     invalidMessage="Message must be atleast 5 characters long"
                     validator={message => message.length > 5}
