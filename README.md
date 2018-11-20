@@ -42,7 +42,8 @@ This will run a webserver on your local host. You can now view your app in your 
 4. Save your app.
 5. In order to test the widget in localhost in the Wix editor you need to disable the editor/site SSL.
 * You can toggle HTTPS at the bottom of your [website settings overview](https://www.wix.com/my-account/site-selector/?buttonText=Manage%20Settings&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https://www.wix.com/dashboard/{{metaSiteId}}/manage-website).
-Be sure to enable it for real tests, as your app must support HTTPS.
+6. Set your app up on a server to ensure everything works.
+* Be sure to [toggle back on HTTPS](https://www.wix.com/my-account/site-selector/?buttonText=Manage%20Settings&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https://www.wix.com/dashboard/{{metaSiteId}}/manage-website) in the editor, and enable HTTPS in webpack by setting `https: true` in the server.js file.
 
 ### **Support**
 Need help setting it up or have any questions?
