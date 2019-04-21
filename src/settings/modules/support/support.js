@@ -90,7 +90,7 @@ export default class Support extends React.Component {
                     placeholder="We'd love to hear from you. Send us a message."
                     isMultiLine={true}
                     invalidMessage="Message must be atleast 5 characters long"
-                    validator={message => message.length > 5}
+                    validator={message => message.length > 4}
                     validateOnBlurOnly={true}
                     onChange={
                         val => this.setMessage(val)
