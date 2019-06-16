@@ -6,7 +6,7 @@ new WebpackDevServer(webpack(config), {
     publicPath: config.output.publicPath,
     hot: true,
     historyApiFallback: true,
-    https: false //Change this to true when testing on a server
+    https: true //Change this to true when testing on a server
 }).listen(3000, 'localhost', function (err, result) {
     if (err) {
         return console.log(err);
