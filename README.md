@@ -7,18 +7,18 @@ The project is already set up with a widget component and its App settings panel
 Most apps have a server side, but to keep it simple, we'll focus only on the client side.
 
 ### **Features**
-* Uses the official Wix UI-lib and [UI controls](http://dev.wix.com/docs/ui-lib/ui-controls/)
+* Uses the official Wix UI-lib and [UI controls](https://dev.wix.com/docs/ui-lib/ui-controls/)
 * Demo implementation of the app’s interaction with its settings panel 
 * Option to use plain CSS (we use SASS by default)
-* Updated with the latest version of [Wix SDK](http://dev.wix.com/docs/sdk/using-the-sdk/)
+* Updated with the latest version of [Wix SDK](https://dev.wix.com/docs/sdk/using-the-sdk/)
 
 ### **Getting started**
 Before you start - get [node.js](https://nodejs.org/en/)
 
-Generate the app:
+Run the app:
 
 1. Clone our starter template
-`git clone git@github.com:wix/tpa-demo-app-react-jsx.git`
+`git clone https://github.com/wix/tpa-demo-app-react-jsx.git`
 2. Navigate to your project folder
 `cd tpa-demo-app-react-jsx/`
 3. Install npm
@@ -28,22 +28,19 @@ Generate the app:
 5. Run the app
 `npm start`
 
-This will run a webserver on your local host. You can now view your app in your browser: http://localhost:3000/widget.html
+This will run a webserver on your local host. You can now view your app in your browser: https://localhost:3000/widget.html
 
 ### **Registering the app**
 
-1. Follow the registration guide to create a new app.
-2. Add a Widget endpoint:
-  * Endpoint URL with the following URL: http://localhost:3000/widget.html
+1. Create an app at: https://dev.wix.com/dc3/my-apps
+2. Go to your "Workspace" and add a new website component of the "Widget" type.
+  * Component URL should be: https://localhost:3000/widget.html
   * Set the width to 300px and height to 400px.
-3. Set the App Setting URL to: 
-  * http://localhost:3000/settings.html
-  * Set the height (up to 578px). 
+3. Set the App Settings URL to: 
+  * https://localhost:3000/settings.html
 4. Save your app.
-5. In order to test the widget in localhost in the Wix editor you need to disable the editor/site SSL.
-* You can toggle HTTPS at the bottom of your [website settings overview](https://www.wix.com/my-account/site-selector/?buttonText=Manage%20Settings&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https://www.wix.com/dashboard/{{metaSiteId}}/manage-website).
-6. Set your app up on a server to ensure everything works.
-* Be sure to [toggle back on HTTPS](https://www.wix.com/my-account/site-selector/?buttonText=Manage%20Settings&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https://www.wix.com/dashboard/{{metaSiteId}}/manage-website) in the editor, and enable HTTPS in webpack by setting `https: true` in the server.js file.
+5. Click "Test your app" in the dashboard, and see that it functions.
+5. Set your app up on a server to ensure everything works in a production enviorment.
 
 ### **Support**
 Need help setting it up or have any questions?
