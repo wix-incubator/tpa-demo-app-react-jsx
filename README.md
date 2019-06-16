@@ -33,14 +33,14 @@ This will run a webserver on your local host. You can now view your app in your 
 ### **Registering the app**
 
 1. Create an app at: https://dev.wix.com/dc3/my-apps
-2. Go to your "Workspace" and add a new website component of the "Widget" type.
+2. Go to your "Workspace" and add a new website component of the "Widget" type and give it a name.
   * Component URL should be: https://localhost:3000/widget.html
   * Set the width to 300px and height to 400px.
 3. Set the App Settings URL to: 
   * https://localhost:3000/settings.html
 4. Save your app.
 5. Click "Test your app" in the dashboard, and see that it functions.
-5. Set your app up on a server to ensure everything works in a production enviorment.
+6. Set your app up on a server to ensure everything works in a production enviorment.
 
 ### **Support**
 Need help setting it up or have any questions?
