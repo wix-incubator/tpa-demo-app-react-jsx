@@ -2,7 +2,7 @@
 ### **Overview**
 
 This boilerplate will make it easy for you to [start developing](http://dev.wix.com/) your [Wix app](https://www.wix.com/app-market/main). 
-The project is already set up with a widget component and its App settings panel.
+The project is already set up with a widget component and its app settings panel.
 
 Most apps have a server side, but to keep it simple, we'll focus only on the client side.
 
