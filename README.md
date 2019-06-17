@@ -13,7 +13,7 @@ Most apps have a server side, but to keep it simple, we'll focus only on the cli
 * Updated with the latest version of [Wix SDK](https://dev.wix.com/docs/sdk/using-the-sdk/)
 
 ### **Getting started**
-Before you start - get [node.js](https://nodejs.org/en/)
+Before you start - get [node.js - version 10.6.0](https://nodejs.org/en/)
 
 Run the app:
 
